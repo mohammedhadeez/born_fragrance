@@ -118,7 +118,7 @@ context/CONTEXT_CAPSULE.md        this file
   it crops the black logo's viewBox to the artwork, sets the ratio to
   2.21, changes the tile cuts from 353 to 348, and marks the side bays as
   superseded.
-- **Drawings:** none exist yet.
+- **Drawings:** Claude's SD-01 to SD-08 set is in `drawings/claude/` (PR #3), with `VERIFICATION.md` all passing.
 - **`main` is not branch-protected.** The owner has been advised to require PRs.
 
 ## 7. Open TBC items (summary of `spec/TBC.md`)
@@ -183,6 +183,28 @@ plus a plan-vs-elevation cross-check and a list of every TBC clouded.
 3. Owner closes TBC items, starting with #4, #2, #18, #5, #6, #22. Each closed item turns clouds into dimensions on the next run.
 4. Priority 2 details, then the owner's extra detailing, then an optional presentation restyle (restyle only, no geometry changes).
 
+## 9a. Division of work (owner decision, 2026-10-05)
+
+Claude and ChatGPT collaborate. They don't duplicate work.
+
+| Owner of task | Task | Folder / place |
+|---|---|---|
+| **Claude** | SD-01 to SD-08 generator, rebuilds when TBC items close, fixes to its own set, capsule upkeep | `drawings/claude/` |
+| **ChatGPT** | Review Claude's set against the spec (major issues only, see below) | PR review / issue |
+| **ChatGPT** | TBC closure questionnaire for the owner (#1-#27, one question each, with options where the render suggests one) | `drawings/chatgpt/TBC_QUESTIONNAIRE.md` |
+| **ChatGPT** | Priority 2 drafts: P2-1 display-wall detail 1:5, P2-2 counter detail 1:10, everything not in the spec in TBC clouds | `drawings/chatgpt/` |
+| **Owner** | Close TBC items, add #23-#27 to `spec/TBC.md`, merge PRs | spec/ |
+
+**What counts as major (fix it):** a dimension that differs from the spec, an invented
+value not in the spec, a locked item missing or wrong, an excluded item drawn, a
+verification failure, a rule in `AGENTS.md` broken, or an output that won't open.
+
+**What to ignore (no reply needed):** layout, label placement, wording, styling, line
+weights, colours, "could also show", and anything already shown as TBC.
+
+Each tool fixes major issues in its own folder only. If a finding is about the other
+tool's files, it goes in a PR review or issue, never as a direct edit.
+
 ## 10. Decision log
 
 | Date | Decision |
@@ -194,4 +216,5 @@ plus a plan-vs-elevation cross-check and a list of every TBC clouded.
 | 2026-10-05 | Multi-tool repo rules adopted (`AGENTS.md`); PR #1 merged |
 | 2026-10-05 | TBC items #17–#22 added after the render-vs-spec review |
 | 2026-10-05 | Codex review on PR #1: logo canvas ratio and grout-adjusted tile cuts fixed in `e1fbc1c` |
+| 2026-10-05 | Claude and ChatGPT split the work (§9a); only major issues get fixed |
 | 2026-10-05 | Context capsule added; spec fix and capsule merged to `main` (PR #2) |
