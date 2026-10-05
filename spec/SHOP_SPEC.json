@@ -1,0 +1,56 @@
+{
+  "project": "BORN FRAGRANCE shop",
+  "status": "Final approved design. Render = design intent only.",
+  "units": "mm",
+  "origin": "front-left internal corner, x across, y into shop",
+  "locked": {
+    "internal_size": {"W": 2400, "D": 3106},
+    "ceiling_height": 2600,
+    "entrance": "single 1000 pivot door, 12 mm clear toughened glass",
+    "design_system": "thin black steel frame, black expanded mesh, raw light plaster, warm integrated shelf lighting, large-format stone-look floor, minimal black branding",
+    "frame_main": "25x25x1.6 MS SHS",
+    "frame_secondary": "20x20x1.6 MS SHS",
+    "shelf_depth": 250,
+    "bay_width_rule": "about 600, adjusted to actual wall length",
+    "mesh": "approx 20x40 diamond expanded metal, mainly upper level",
+    "walls": "raw textured plaster",
+    "floor": "1200x600 rectified stone-look porcelain, 2 mm grout",
+    "metal_finish": "matte black powder coat",
+    "counter": {
+      "W": 1000, "D": 450, "H": 900,
+      "frame": "20x20 black steel",
+      "front": "light neutral panel with small mesh insert",
+      "top": "simple light-coloured"
+    },
+    "lighting": {
+      "cct": "3000K",
+      "tracks": 2,
+      "spots": "simple cylindrical black adjustable",
+      "shelf_led": "concealed under shelves"
+    },
+    "signage": {
+      "brand": "BORN FRAGRANCE",
+      "logo_asset": "assets/brand/born-fragrance-logo.svg",
+      "logo_note": "source artwork is cream (#fff4df); use black fill on drawings",
+      "logo_aspect_ratio": 2.2,
+      "exterior": "black backlit/halo-lit, size TBC",
+      "interior": "smaller non-illuminated black logo, size and height TBC"
+    }
+  },
+  "storefront_read_from_render_unverified": {
+    "layout": "display column | door opening | display column",
+    "column_width_each": "TBC (render suggests about 400-450)",
+    "opening_width": "TBC (render suggests about 1500)",
+    "fixed_glass_beside_door": "TBC",
+    "overall_height_and_sign_band": "TBC"
+  },
+  "derived_proposals_unverified": {
+    "clear_aisle_width": 1900,
+    "side_bays": "5 x 621.2",
+    "floor_tile_cuts": "4 full courses + 2 x 353 in depth",
+    "counter_position_x": [700, 1700],
+    "counter_side_clearance": "450 each side (CHECK, tight for staff)"
+  },
+  "exclusions": ["timber", "brass", "decorative arches", "heavy joinery", "pendants", "decorative ceiling features", "plants", "loose products"],
+  "rule": "Any value not in 'locked' or confirmed by the owner is TBC. Do not guess."
+}
