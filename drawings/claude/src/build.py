@@ -117,7 +117,33 @@ def load_logo():
                     u**3 * p0[1] + 3 * u * u * t * p1[1] + 3 * u * t * t * p2[1] + t**3 * p3[1]))
             cur = p3
     x0, y0, w, h = vb
-    return [[((x - x0) / w, (y0 + h - y) / w) for x, y in sp] for sp in subs], h / w
+    subs = [[((x - x0) / w, (y0 + h - y) / w) for x, y in sp] for sp in subs]
+    return [evenodd_orient(sp, subs) for sp in subs], h / w
+
+
+def _area(sp):
+    return sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(sp, sp[1:] + sp[:1])) / 2
+
+
+def _inside(pt, sp):
+    x, y = pt
+    hit = False
+    for (ax, ay), (bx, by) in zip(sp, sp[1:] + sp[:1]):
+        if (ay > y) != (by > y) and x < ax + (y - ay) * (bx - ax) / (by - ay):
+            hit = not hit
+    return hit
+
+
+def evenodd_orient(sp, subs):
+    """Wind a sub-path so the non-zero fill rule gives the SVG's even-odd result.
+
+    The logo SVG uses fill-rule="evenodd" (letter counters such as the holes in
+    B and O are separate sub-paths). matplotlib fills with non-zero winding, so
+    outlines nested an odd number of times are reversed to cut holes.
+    """
+    depth = sum(_inside(sp[0], other) for other in subs if other is not sp)
+    ccw = _area(sp) > 0
+    return sp if ccw == (depth % 2 == 0) else sp[::-1]
 
 
 LOGO_PATHS, LOGO_H_PER_W = load_logo()
