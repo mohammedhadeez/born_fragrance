@@ -14,74 +14,135 @@ converted at 1:20) and the PDF MediaBox.
 | SD-01 | internal width | 2400 | DXF | 2400 | YES |
 | SD-01 | internal depth | 3106 | DXF | 3106 | YES |
 | SD-01 | side unit depth L | 250 | DXF | 250 | YES |
-| SD-01 | clear aisle (proposal) | 1900 | DXF | 1900 | YES |
+| SD-01 | clear aisle | 1900 | DXF | 1900 | YES |
 | SD-01 | side unit depth R | 250 | DXF | 250 | YES |
+| SD-01 | storefront column L | 450 | DXF | 450 | YES |
+| SD-01 | entrance opening | 1500 | DXF | 1500 | YES |
+| SD-01 | storefront column R | 450 | DXF | 450 | YES |
+| SD-01 | fixed glass | 488 | DXF | 488 | YES |
+| SD-01 | door leaf width | 1000 | DXF | 1000 | YES |
+| SD-01 | storefront column depth | 450 | DXF | 450 | YES |
 | SD-01 | shell width (SVG) | 2400.0 | SVG | 2400 | YES |
 | SD-01 | shell height (SVG) | 3106.0 | SVG | 3106 | YES |
 | SD-01 | page size (PDF) | 420.0x297.0 | PDF | 420x297 | YES |
 | SD-02 | scale bar 2000 mm | 2000 | sheet | 2000 | YES |
+| SD-02 | side bay 1 | 664 | DXF | 664 | YES |
+| SD-02 | side bay 2 | 664 | DXF | 664 | YES |
+| SD-02 | side bay 3 | 664 | DXF | 664 | YES |
+| SD-02 | side bay 4 | 664 | DXF | 664 | YES |
+| SD-02 | side run | 2656 | DXF | 2656 | YES |
+| SD-02 | storefront column depth | 450 | DXF | 450 | YES |
+| SD-02 | rear zone 1 | 650 | DXF | 650 | YES |
+| SD-02 | rear zone 2 | 600 | DXF | 600 | YES |
+| SD-02 | rear zone 3 | 650 | DXF | 650 | YES |
+| SD-02 | internal width | 2400 | DXF | 2400 | YES |
 | SD-02 | counter width | 1000 | DXF | 1000 | YES |
 | SD-02 | counter depth | 450 | DXF | 450 | YES |
-| SD-02 | counter clearance L (proposal) | 450 | DXF | 450 | YES |
-| SD-02 | counter clearance R (proposal) | 450 | DXF | 450 | YES |
-| SD-02 | internal width | 2400 | DXF | 2400 | YES |
-| SD-02 | internal depth | 3106 | DXF | 3106 | YES |
-| SD-02 | unit depth L | 250 | DXF | 250 | YES |
-| SD-02 | clear aisle (proposal) | 1900 | DXF | 1900 | YES |
-| SD-02 | unit depth R | 250 | DXF | 250 | YES |
+| SD-02 | escape route beside counter | 900 | DXF | 900 | YES |
+| SD-02 | counter to rear unit | 700 | DXF | 700 | YES |
 | SD-02 | shell width (SVG) | 2400.0 | SVG | 2400 | YES |
 | SD-02 | shell height (SVG) | 3106.0 | SVG | 3106 | YES |
 | SD-02 | page size (PDF) | 420.0x297.0 | PDF | 420x297 | YES |
 | SD-03 | scale bar 2000 mm | 2000 | sheet | 2000 | YES |
-| SD-03 | tile row 1 (option A) | 348 | DXF | 348 | YES |
-| SD-03 | tile row 2 (option A) | 600 | DXF | 600 | YES |
-| SD-03 | tile row 3 (option A) | 600 | DXF | 600 | YES |
-| SD-03 | tile row 4 (option A) | 600 | DXF | 600 | YES |
-| SD-03 | tile row 5 (option A) | 600 | DXF | 600 | YES |
-| SD-03 | tile row 6 (option A) | 348 | DXF | 348 | YES |
-| SD-03 | tile col 1 (option A) | 1199 | DXF | 1199 | YES |
-| SD-03 | tile col 2 (option A) | 1199 | DXF | 1199 | YES |
+| SD-03 | tile col 1 | 1194 | DXF | 1194 | YES |
+| SD-03 | tile col 2 | 1194 | DXF | 1194 | YES |
+| SD-03 | tile row 1 | 343 | DXF | 343 | YES |
+| SD-03 | tile row 2 | 600 | DXF | 600 | YES |
+| SD-03 | tile row 3 | 600 | DXF | 600 | YES |
+| SD-03 | tile row 4 | 600 | DXF | 600 | YES |
+| SD-03 | tile row 5 | 600 | DXF | 600 | YES |
+| SD-03 | tile row 6 | 343 | DXF | 343 | YES |
 | SD-03 | internal width | 2400 | DXF | 2400 | YES |
 | SD-03 | internal depth | 3106 | DXF | 3106 | YES |
-| SD-03 | check: A depth sum | 3106 | computed | 3106 | YES |
-| SD-03 | check: A width sum | 2400 | computed | 2400 | YES |
+| SD-03 | check: width sum incl. joints | 2400 | computed | 2400 | YES |
+| SD-03 | check: depth sum incl. joints | 3106 | computed | 3106 | YES |
 | SD-03 | shell width (SVG) | 2400.0 | SVG | 2400 | YES |
 | SD-03 | shell height (SVG) | 3106.0 | SVG | 3106 | YES |
 | SD-03 | page size (PDF) | 420.0x297.0 | PDF | 420x297 | YES |
 | SD-04 | scale bar 2000 mm | 2000 | sheet | 2000 | YES |
+| SD-04 | track length | 2206 | DXF | 2206 | YES |
+| SD-04 | track 1 from left wall | 650 | DXF | 650 | YES |
+| SD-04 | track 2 from right wall | 650 | DXF | 650 | YES |
 | SD-04 | internal width | 2400 | DXF | 2400 | YES |
 | SD-04 | internal depth | 3106 | DXF | 3106 | YES |
 | SD-04 | shell width (SVG) | 2400.0 | SVG | 2400 | YES |
 | SD-04 | shell height (SVG) | 3106.0 | SVG | 3106 | YES |
 | SD-04 | page size (PDF) | 420.0x297.0 | PDF | 420x297 | YES |
 | SD-05 | scale bar 2000 mm | 2000 | sheet | 2000 | YES |
+| SD-05 | storefront column L | 450 | DXF | 450 | YES |
+| SD-05 | entrance opening | 1500 | DXF | 1500 | YES |
+| SD-05 | storefront column R | 450 | DXF | 450 | YES |
+| SD-05 | fixed glass | 488 | DXF | 488 | YES |
 | SD-05 | door leaf width | 1000 | DXF | 1000 | YES |
 | SD-05 | shopfront internal width | 2400 | DXF | 2400 | YES |
+| SD-05 | door leaf height | 2580 | DXF | 2580 | YES |
 | SD-05 | floor to ceiling (ref) | 2600 | DXF | 2600 | YES |
-| SD-05 | logo aspect ratio (w/h) | 2.208 | geometry | 2.21 | YES |
+| SD-05 | sign band height | 600 | DXF | 600 | YES |
+| SD-05 | storefront overall height | 3200 | DXF | 3200 | YES |
+| SD-05 | logo aspect ratio (w/h) | 2.208 | geometry | 2.2076 | YES |
 | SD-05 | shell width (SVG) | 2400.0 | SVG | 2400 | YES |
 | SD-05 | shell height (SVG) | 2600.0 | SVG | 2600 | YES |
 | SD-05 | page size (PDF) | 420.0x297.0 | PDF | 420x297 | YES |
 | SD-06 | scale bar 2000 mm | 2000 | sheet | 2000 | YES |
-| SD-06 | floor to ceiling | 2600 | DXF | 2600 | YES |
 | SD-06 | elevation length | 2400 | DXF | 2400 | YES |
+| SD-06 | floor to ceiling | 2600 | DXF | 2600 | YES |
 | SD-06 | side unit depth L | 250 | DXF | 250 | YES |
 | SD-06 | side unit depth R | 250 | DXF | 250 | YES |
+| SD-06 | rear zone 1 | 650 | DXF | 650 | YES |
+| SD-06 | rear zone 2 | 600 | DXF | 600 | YES |
+| SD-06 | rear zone 3 | 650 | DXF | 650 | YES |
+| SD-06 | logo aspect ratio (w/h) | 2.208 | geometry | 2.2076 | YES |
+| SD-06 | interior logo centre height | 1900 | DXF | 1900 | YES |
 | SD-06 | counter width | 1000 | DXF | 1000 | YES |
 | SD-06 | counter height | 900 | DXF | 900 | YES |
-| SD-06 | logo aspect ratio (w/h) | 2.208 | geometry | 2.21 | YES |
+| SD-06 | counter mesh insert width | 300 | DXF | 300 | YES |
+| SD-06 | counter mesh insert height | 450 | DXF | 450 | YES |
+| SD-06 | rear level 0-100 | 100 | DXF | 100 | YES |
+| SD-06 | rear level 100-600 | 500 | DXF | 500 | YES |
+| SD-06 | rear level 600-1000 | 400 | DXF | 400 | YES |
+| SD-06 | rear level 1000-1400 | 400 | DXF | 400 | YES |
+| SD-06 | rear level 1400-1800 | 400 | DXF | 400 | YES |
+| SD-06 | rear level 1800-2200 | 400 | DXF | 400 | YES |
+| SD-06 | rear level 2200-2600 | 400 | DXF | 400 | YES |
+| SD-06 | display frame height | 2600 | DXF | 2600 | YES |
 | SD-06 | shell width (SVG) | 2400.0 | SVG | 2400 | YES |
 | SD-06 | shell height (SVG) | 2600.0 | SVG | 2600 | YES |
 | SD-06 | page size (PDF) | 420.0x297.0 | PDF | 420x297 | YES |
 | SD-07 | scale bar 2000 mm | 2000 | sheet | 2000 | YES |
-| SD-07 | floor to ceiling | 2600 | DXF | 2600 | YES |
 | SD-07 | elevation length | 3106 | DXF | 3106 | YES |
+| SD-07 | side bay 1 | 664 | DXF | 664 | YES |
+| SD-07 | side bay 2 | 664 | DXF | 664 | YES |
+| SD-07 | side bay 3 | 664 | DXF | 664 | YES |
+| SD-07 | side bay 4 | 664 | DXF | 664 | YES |
+| SD-07 | storefront column depth | 450 | DXF | 450 | YES |
+| SD-07 | floor to ceiling | 2600 | DXF | 2600 | YES |
+| SD-07 | side level 0-100 | 100 | DXF | 100 | YES |
+| SD-07 | side level 100-600 | 500 | DXF | 500 | YES |
+| SD-07 | side level 600-1000 | 400 | DXF | 400 | YES |
+| SD-07 | side level 1000-1400 | 400 | DXF | 400 | YES |
+| SD-07 | side level 1400-1800 | 400 | DXF | 400 | YES |
+| SD-07 | side level 1800-2200 | 400 | DXF | 400 | YES |
+| SD-07 | side level 2200-2600 | 400 | DXF | 400 | YES |
+| SD-07 | display frame height | 2600 | DXF | 2600 | YES |
 | SD-07 | shell width (SVG) | 3106.0 | SVG | 3106 | YES |
 | SD-07 | shell height (SVG) | 2600.0 | SVG | 2600 | YES |
 | SD-07 | page size (PDF) | 420.0x297.0 | PDF | 420x297 | YES |
 | SD-08 | scale bar 2000 mm | 2000 | sheet | 2000 | YES |
-| SD-08 | floor to ceiling | 2600 | DXF | 2600 | YES |
 | SD-08 | elevation length | 3106 | DXF | 3106 | YES |
+| SD-08 | side bay 1 | 664 | DXF | 664 | YES |
+| SD-08 | side bay 2 | 664 | DXF | 664 | YES |
+| SD-08 | side bay 3 | 664 | DXF | 664 | YES |
+| SD-08 | side bay 4 | 664 | DXF | 664 | YES |
+| SD-08 | storefront column depth | 450 | DXF | 450 | YES |
+| SD-08 | floor to ceiling | 2600 | DXF | 2600 | YES |
+| SD-08 | side level 0-100 | 100 | DXF | 100 | YES |
+| SD-08 | side level 100-600 | 500 | DXF | 500 | YES |
+| SD-08 | side level 600-1000 | 400 | DXF | 400 | YES |
+| SD-08 | side level 1000-1400 | 400 | DXF | 400 | YES |
+| SD-08 | side level 1400-1800 | 400 | DXF | 400 | YES |
+| SD-08 | side level 1800-2200 | 400 | DXF | 400 | YES |
+| SD-08 | side level 2200-2600 | 400 | DXF | 400 | YES |
+| SD-08 | display frame height | 2600 | DXF | 2600 | YES |
 | SD-08 | shell width (SVG) | 3106.0 | SVG | 3106 | YES |
 | SD-08 | shell height (SVG) | 2600.0 | SVG | 2600 | YES |
 | SD-08 | page size (PDF) | 420.0x297.0 | PDF | 420x297 | YES |
@@ -91,19 +152,17 @@ converted at 1:20) and the PDF MediaBox.
 | Check | Instances | Values found | Spec | Match |
 |---|---|---|---|---|
 | internal width plans = elevation length SD-06 | 5 | 2400 | 2400 | YES |
-| internal depth plans = elevation length SD-07/08 | 6 | 3106 | 3106 | YES |
+| internal depth plans = elevation length SD-07/08 | 5 | 3106 | 3106 | YES |
 | shopfront width SD-05 = plan width | 1 | 2400 | 2400 | YES |
 | ceiling height all elevations | 4 | 2600 | 2600 | YES |
-| unit depth plan = rear elevation section | 6 | 250 | 250 | YES |
-| door width SD-05 = spec | 1 | 1000 | 1000 | YES |
+| unit depth plan = rear elevation section | 4 | 250 | 250 | YES |
+| door width SD-05 = spec | 2 | 1000 | 1000 | YES |
 | counter width SD-02 = SD-06 | 2 | 1000 | 1000 | YES |
 
 ## Dimensions shown as TBC (not checked against the spec)
 
 | Drawing | Dimension | Drawn length (placeholder) | Label |
 |---|---|---|---|
-| SD-01 | side run (TBC) | 3106 | SIDE RUN TBC #9 #18 #24* |
-| SD-05 | door height (TBC) | 2100 | DOOR HT TBC #2 |
 
 ## Proposed TBC items (not yet in spec/TBC.md)
 

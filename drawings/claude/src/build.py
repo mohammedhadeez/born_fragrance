@@ -14,6 +14,7 @@ Run from the repo root:  python3 drawings/claude/src/build.py
 import datetime
 import json
 import math
+import os
 import re
 import subprocess
 from pathlib import Path
@@ -29,13 +30,19 @@ from matplotlib.path import Path as MPath  # noqa: E402
 from ezdxf.enums import TextEntityAlignment  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "drawings" / "claude"
+OUT = Path(os.environ.get("BF_OUT", ROOT / "drawings" / "claude"))
 SCALE = 20  # 1:20
 A3 = (420.0, 297.0)
 PT = 72 / 25.4  # points per mm
 
 # ----------------------------------------------------------------- spec data
-SPEC = json.loads((ROOT / "spec" / "SHOP_SPEC.json").read_text())
+SPEC_FILE = Path(os.environ.get("BF_SPEC", ROOT / "spec" / "SHOP_SPEC.json"))
+SPEC = json.loads(SPEC_FILE.read_text())
+# Owner-confirmed values that close TBC items. Each block switches the sheets
+# that need it from TBC clouds to real geometry (see confirmed.py).
+CONF = SPEC.get("confirmed", {})
+REV = CONF.get("rev", "00 - preliminary")
+STATUS = CONF.get("status", "PRELIMINARY - NOT FOR CONSTRUCTION")
 L = SPEC["locked"]
 W = L["internal_size"]["W"]
 D = L["internal_size"]["D"]
@@ -219,7 +226,7 @@ class Sheet:
             ("TITLE", self.title),
             ("SCALE", "1:20 @ A3"),
             ("DATE", DATE),
-            ("REV", "00 - preliminary"),
+            ("REV", REV),
             ("SPEC", f"spec/SHOP_SPEC.json @ {SPEC_SHA}"),
             ("DRAWN", "Claude Code (AI), for owner review"),
         ]
@@ -243,9 +250,9 @@ class Sheet:
                      "TBC items are shown in revision clouds.",
                      "Dimensions computed from SHOP_SPEC.json.",
                      "Do not scale from the render.",
-                     "PRELIMINARY - NOT FOR CONSTRUCTION"):
+                     STATUS):
             self.text((x, y), note, h=1.5, layer="A-SHEET",
-                      bold=note.startswith("PRELIM"))
+                      bold=note == STATUS)
             y -= 2.6
         # scale bar 0-2000 mm
         sx, sy = 20, 18
@@ -806,8 +813,10 @@ def main():
     (OUT / "preview").mkdir(parents=True, exist_ok=True)
     built = []
     with PdfPages(OUT / "BF_SD-01-08_set.pdf") as pdf:
+        import confirmed  # noqa: PLC0415
         for stem, fn in SHEETS:
-            s = fn()
+            alt = confirmed.SHEETS.get(stem)
+            s = alt() if alt and confirmed.ready(stem) else fn()
             s.render(stem, pdf)
             built.append((stem, s))
     import verify  # noqa: PLC0415
