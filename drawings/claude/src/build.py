@@ -426,6 +426,10 @@ def side_units(s, layer="A-FURN", ls="-"):
     for x0 in (0, W - SHELF):
         s.rect(*P(x0, 0), *P(x0 + SHELF, D), lw=0.25, layer=layer, ls=ls,
                fill="#f1ece4" if ls == "-" else None)
+        # run length and end conditions are TBC (#9, #18, #24): cloud the whole run
+        s.cloud(*P(x0 - 50, -40), *P(x0 + SHELF + 50, D + 40))
+        s.text(P(x0 + SHELF / 2, D * 0.2), "RUN TBC #9 #18 #24*", h=1.4, rot=90,
+               ha="center", va="center", layer="A-TBC-CLOUD")
 
 
 # ------------------------------------------------------------------- sheets
@@ -480,7 +484,6 @@ def sd02():
     for x0 in (0, W - SHELF):
         s.text(P(x0 + SHELF / 2, D / 2), "DISPLAY UNIT - 250 DEEP - BLACK SHS FRAME",
                h=1.6, rot=90, ha="center", va="center")
-    s.cloud(*P(-150, 1200), *P(SHELF + 120, 1900), label="")
     s.text(P(-450, 1950), "BAYS ~600, COUNT TBC #24*\nBASE CAB TBC #7", h=1.5, ha="right",
            layer="A-TBC-CLOUD")
     # rear units (layout TBC #9)
@@ -558,7 +561,6 @@ def sd03():
     s.dim(P(0, D), P(W, D), 14, key="internal width", expect=W)
     s.dim(P(0, 0), P(0, D), 15, key="internal depth", expect=D)
     side_units(s, layer="A-FURN", ls="--")
-    s.cloud(*P(-60, 100), *P(SHELF + 60, D - 100), label="")
     s.text(P(-500, D - 300), "TILE UNDER\nUNITS TBC #14", h=1.5, ha="right", layer="A-TBC-CLOUD")
     s.line(P(W / 2, -100), P(W / 2, D + 100), lw=0.18, layer="A-SETOUT", ls="-.")
     s.text(P(W / 2 + 40, 200), "SETTING-OUT LINE = CL", h=1.5, layer="A-SETOUT", rot=90)
@@ -651,7 +653,7 @@ def wall_units_elev(s, x0, x1, title):
     for x in (x0, x1):
         s.rect(*E(x, 0), *E(x + (25 if x == x0 else -25), CEIL), lw=0.25, layer="A-FURN",
                fill="#222222")
-    s.cloud(*E(x0 + 80, 150), *E(x1 - 80, CEIL - 120),
+    s.cloud(*E(x0 - 60, 40), *E(x1 + 60, CEIL + 60),
             label=f"{title}: FRAME HEIGHT #5, SHELF COUNT/PITCH #6,\n"
                   "BASE CAB #7, MESH ZONE #8, SHELF MATL #19, BAYS #24*")
     s.text(E((x0 + x1) / 2, CEIL / 2 + 200), "RAW TEXTURED PLASTER BEHIND (LOCKED)",
@@ -693,6 +695,7 @@ def sd05():
     s.dim(E(dx0 + DOOR_W, 0), E(dx0 + DOOR_W, 2100), -6, text="DOOR HT TBC #2",
           key="door height (TBC)")
     s.dim(E(0, 0), E(W, 0), -16, key="shopfront internal width", expect=W)
+    s.cloud(*E(dx0 - 30, 40), *E(dx0 + DOOR_W + 30, 2250), label="DOOR HEIGHT\nTBC #2")
     s.dim(E(0, 0), E(0, CEIL), 10, key="floor to ceiling (ref)", expect=CEIL)
     s.cloud(*E(-250, 80), *E(dx0 - 40, CEIL - 80), label="DISPLAY COL\n#2 #18")
     s.cloud(*E(dx0 + DOOR_W + 40, 80), *E(W + 250, CEIL - 80), label="DISPLAY COL\n#2 #18")
@@ -719,6 +722,7 @@ def sd06():
         s.rect(*E(x0, 0), *E(x0 + SHELF, CEIL), lw=0.35, layer="A-FURN", fill="#d9d4cc")
         s.text(E(x0 + SHELF / 2, CEIL / 2), "SIDE UNIT IN SECTION", h=1.4, rot=90,
                ha="center", va="center")
+        s.cloud(*E(x0 - 30, 40), *E(x0 + SHELF + 30, CEIL + 60))
     s.dim(E(0, CEIL), E(SHELF, CEIL), 3, key="side unit depth L", expect=SHELF)
     s.dim(E(W - SHELF, CEIL), E(W, CEIL), 3, key="side unit depth R", expect=SHELF)
     s.cloud(*E(SHELF + 40, 1000), *E(W - SHELF - 40, CEIL - 60),
@@ -730,8 +734,7 @@ def sd06():
            layer="A-TBC-CLOUD")
     cx0, cx1 = CTR_X
     s.rect(*E(cx0, 0), *E(cx1, CTR["H"]), lw=0.35, layer="A-FURN", fill="#e9e4da")
-    s.rect(*E(cx0, 0), *E(cx0 + CTR["W"] * 0.4, CTR["H"] - 40), lw=0.18, layer="A-FURN",
-           fill="#8a8a8a")
+    s.cloud(*E(cx0 + 40, 60), *E(cx1 - 40, CTR["H"] - 60), label="MESH INSERT TBC #27*", h=1.6)
     s.text(E((cx0 + cx1) / 2, CTR["H"] / 2), "COUNTER (IN FRONT)", h=1.5, ha="center",
            va="center")
     s.dim(E(cx0, 0), E(cx1, 0), -8, key="counter width", expect=CTR["W"])
