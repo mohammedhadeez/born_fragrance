@@ -14,12 +14,12 @@ editable `<text>`) and a 200 dpi PNG preview of the same view.
 
 | View | SVG | Source sheet | Size (mm) |
 |---|---|---|---|
-| Furniture plan | `furniture-plan.svg` | SD-02 | 181 × 200 |
-| Storefront elevation | `storefront-elevation.svg` | SD-05 | 160 × 202 |
-| Rear elevation | `rear-elevation.svg` | SD-06 | 163 × 166 |
-| Left display elevation | `left-elevation.svg` | SD-07 | 199 × 177 |
-| Right display elevation | `right-elevation.svg` | SD-08 | 199 × 177 |
-| Reflected ceiling plan | `reflected-ceiling-plan.svg` | SD-04 | 177 × 184 |
+| Furniture plan | `furniture-plan.svg` | SD-02 | 181 × 205 |
+| Storefront elevation | `storefront-elevation.svg` | SD-05 | 160 × 206 |
+| Rear elevation | `rear-elevation.svg` | SD-06 | 163 × 168 |
+| Left display elevation | `left-elevation.svg` | SD-07 | 214 × 181 |
+| Right display elevation | `right-elevation.svg` | SD-08 | 214 × 181 |
+| Reflected ceiling plan | `reflected-ceiling-plan.svg` | SD-04 | 177 × 186 |
 
 Other assets:
 - **Approved render:** `assets/renders/born-fragrance-shop.png` (design intent only)

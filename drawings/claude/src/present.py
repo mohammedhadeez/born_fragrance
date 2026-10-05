@@ -35,6 +35,21 @@ VIEWS = [
 ]
 
 
+def text_box(op):
+    """Corners of a label's estimated extent (paper mm), from its anchor, size,
+    alignment and rotation. DejaVu Sans caps run about 0.7 x height per character."""
+    _, (x, y), txt, h, _layer, ha, va, rot, _bold = op
+    lines = txt.split("\n")
+    w = max(len(ln) for ln in lines) * h * 0.7
+    tall = len(lines) * h * 1.3
+    dx = {"left": (0, w), "center": (-w / 2, w / 2), "right": (-w, 0)}[ha]
+    dy = {"bottom": (0, tall), "center": (-tall / 2, tall / 2), "top": (-tall, 0)}[va]
+    corners = [(u, v) for u in dx for v in dy]
+    if rot % 180:  # 90 / 270: swap axes
+        corners = [(-v, u) for u, v in corners]
+    return [(x + u, y + v) for u, v in corners]
+
+
 def bbox(ops):
     pts = []
     for op in ops:
@@ -42,7 +57,7 @@ def bbox(ops):
         if kind == "pl":
             pts += op[1]
         elif kind == "text":
-            pts.append(op[1])
+            pts += text_box(op)
         elif kind == "circle":
             (cx, cy), r = op[1], op[2]
             pts += [(cx - r, cy - r), (cx + r, cy + r)]
