@@ -74,7 +74,7 @@
   "confirmed": {
     "rev": "A - owner-approved TBC answers",
     "status": "FOR COORDINATION - SITE ITEMS OPEN",
-    "source": "drawings/chatgpt/TBC_ANSWERS.json (ChatGPT, PR #4) with Claude corrections C1-C11, approved by owner 2026-10-05",
+    "source": "drawings/chatgpt/TBC_ANSWERS.json @ 5b0a65f (ChatGPT, PR #4), reviewed by Claude (C1-C11), owner-approved 2026-10-05",
     "storefront": {
       "column_width": 450,
       "column_depth": 450,
@@ -132,7 +132,7 @@
         "h": 450,
         "z": 150
       },
-      "note": "centred under the logo per render (owner 2026-10-05); 450 each side < 900 escape assumption: CHECK with consultant (#16)"
+      "note": "centred under the logo: approved design intent (owner 2026-10-05). 450 each side; consultant to confirm escape/staff access under TBC #16"
     },
     "lighting": {
       "cct": "3000K",
