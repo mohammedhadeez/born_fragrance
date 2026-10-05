@@ -21,3 +21,9 @@ and in `SHOP_SPEC.json` in the same commit.
 | 14 | Floor tile extent under display units | SD-03 | Open |
 | 15 | Exterior and interior sign sizes | SD-05, SD-06 | Open |
 | 16 | Fixings, MEP, fire and escape requirements | All | Open |
+| 17 | Exterior sign illumination: halo-lit (spec) vs front-lit by downlights (render) | SD-04, SD-05 | Open |
+| 18 | Storefront display column depth, and shelf facing (street, shop or both) | SD-01, SD-02, SD-05, SD-07, SD-08 | Open |
+| 19 | Shelf material and thickness (render board: "black metal shelf") | SD-06 to SD-08 | Open |
+| 20 | Entrance threshold / step and any floor level change | SD-01, SD-03, SD-05 | Open |
+| 21 | Ceiling finish | SD-04 | Open |
+| 22 | Floor tile orientation (1200 across or along), and cut sizes allowing for 2 mm grout (2 x 1200 + joint = 2402 > 2400; depth cuts approx 348, not 353) | SD-03 | Open |
