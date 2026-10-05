@@ -9,7 +9,7 @@ or `AGENTS.md`, those files win.
 |---|---|
 | Capsule version | v1, 2026-10-05 |
 | Written by | Claude |
-| Spec state it describes | commit `e1fbc1c` on branch `claude/great-goldberg-anh45q` (see §6) |
+| Spec state it describes | `main`, including spec fix `e1fbc1c` (see §6) |
 | Owner | mohammedhadeez. The only person who merges, closes TBC items or changes the spec |
 
 ---
@@ -112,13 +112,12 @@ context/CONTEXT_CAPSULE.md        this file
 --                                stray placeholder file from the first commit (owner to remove)
 ```
 
-- **On `main`:** everything above except the `e1fbc1c` fix and this capsule.
-  PR #1 merged the spec, the TBC list, `AGENTS.md` and the black logo.
-- **On `claude/great-goldberg-anh45q` only, until merged:** commit
-  `e1fbc1c`. It fixes the two findings from the Codex review on PR #1. It
-  crops the black logo's viewBox to the artwork, sets the ratio to 2.21,
-  changes the tile cuts from 353 to 348, and marks the side bays as
-  superseded. Read the spec from this branch until it reaches `main`.
+- **On `main`:** everything above. PR #1 merged the spec, the TBC list,
+  `AGENTS.md` and the black logo. PR #2 merged this capsule and commit
+  `e1fbc1c`, which fixes the two findings from the Codex review on PR #1:
+  it crops the black logo's viewBox to the artwork, sets the ratio to
+  2.21, changes the tile cuts from 353 to 348, and marks the side bays as
+  superseded.
 - **Drawings:** none exist yet.
 - **`main` is not branch-protected.** The owner has been advised to require PRs.
 
@@ -179,11 +178,10 @@ plus a plan-vs-elevation cross-check and a list of every TBC clouded.
 
 ## 9. What happens next
 
-1. Owner merges the `e1fbc1c` spec fix to `main`.
-2. Claude draws SD-01–SD-04, then SD-05–SD-08, in `drawings/claude/`, and runs the verification.
-3. Other tools may produce an independent set in `drawings/<tool>/` for comparison, if the owner asks.
-4. Owner closes TBC items, starting with #4, #2, #18, #5, #6, #22. Each closed item turns clouds into dimensions on the next run.
-5. Priority 2 details, then the owner's extra detailing, then an optional presentation restyle (restyle only, no geometry changes).
+1. Claude draws SD-01–SD-04, then SD-05–SD-08, in `drawings/claude/`, and runs the verification.
+2. Other tools may produce an independent set in `drawings/<tool>/` for comparison, if the owner asks.
+3. Owner closes TBC items, starting with #4, #2, #18, #5, #6, #22. Each closed item turns clouds into dimensions on the next run.
+4. Priority 2 details, then the owner's extra detailing, then an optional presentation restyle (restyle only, no geometry changes).
 
 ## 10. Decision log
 
@@ -196,3 +194,4 @@ plus a plan-vs-elevation cross-check and a list of every TBC clouded.
 | 2026-10-05 | Multi-tool repo rules adopted (`AGENTS.md`); PR #1 merged |
 | 2026-10-05 | TBC items #17–#22 added after the render-vs-spec review |
 | 2026-10-05 | Codex review on PR #1: logo canvas ratio and grout-adjusted tile cuts fixed in `e1fbc1c` |
+| 2026-10-05 | Context capsule added; spec fix and capsule merged to `main` (PR #2) |
