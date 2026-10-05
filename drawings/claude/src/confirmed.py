@@ -189,12 +189,18 @@ def sd02():
     s.dim(P(cx0, cy0), P(cx1, cy0), -6, key="counter width", expect=CTR["W"])
     s.dim(P(cx1, cy0), P(cx1, cy1), -5, key="counter depth", expect=CTR["D"])
     esc = CT["escape_min"]
-    s.dim(P(cx1, cy0 + 120), P(W - SHELF, cy0 + 120), 0.0001, key="escape route beside counter",
+    s.dim(P(cx1, cy0 + 120), P(W - SHELF, cy0 + 120), 0.0001, key="clearance right of counter",
           expect=W - SHELF - cx1)
+    if cx0 > SHELF:
+        s.dim(P(SHELF, cy0 + 120), P(cx0, cy0 + 120), 0.0001, key="clearance left of counter",
+              expect=cx0 - SHELF)
+    if max(cx0 - SHELF, W - SHELF - cx1) < esc:
+        s.cloud(*P(SHELF - 20, cy0 - 40), *P(W - SHELF + 20, cy1 + 40))
     s.dim(P((cx0 + cx1) / 2, cy1), P((cx0 + cx1) / 2, D - SHELF), 0.0001,
           key="counter to rear unit", expect=D - SHELF - cy1)
-    s.text(P(W - SHELF - 20, cy0 - 120), f"ESCAPE >= {esc} OK" if W - SHELF - cx1 >= esc
-           else f"ESCAPE < {esc} - CHECK", h=1.5, ha="right", va="top")
+    s.text(P(W / 2, cy0 - 120), f"ESCAPE >= {esc} OK" if max(cx0 - SHELF, W - SHELF - cx1) >= esc
+           else f"GAPS < {esc} ESCAPE ASSUMPTION - CHECK #16", h=1.5, ha="center", va="top",
+           layer="A-TEXT" if max(cx0 - SHELF, W - SHELF - cx1) >= esc else "A-TBC-CLOUD")
     x, y = 18, 270
     s.text((x, y), "LEGEND", h=2.2, bold=True)
     for i, t in enumerate([
@@ -325,7 +331,7 @@ def mesh(s, x0, z0, x1, z1, step=60):
         k += step
 
 
-def bay_elev(s, x0, x1, shelves=True, door=True):
+def bay_elev(s, x0, x1, shelves=True, door=True, with_mesh=True):
     """One display bay between uprights x0..x1 (elevation mm)."""
     pl, cab = UN["plinth_h"], UN["base_cab_h"]
     s.rect(*E(x0, pl), *E(x1, cab), lw=0.18, layer="A-FURN", fill="#ebe7df")
@@ -343,7 +349,8 @@ def bay_elev(s, x0, x1, shelves=True, door=True):
                    fill="#222222")
             s.line(E(x0 + 20, z - UN["shelf_downstand"] - 15),
                    E(x1 - 20, z - UN["shelf_downstand"] - 15), lw=0.25, layer="E-LED", ls=":")
-    mesh(s, x0, mz0, x1, mz1)
+    if with_mesh:
+        mesh(s, x0, mz0, x1, mz1)
 
 
 def uprights(s, xs):
@@ -459,7 +466,7 @@ def sd06():
     mid = len(UN["rear_zones"]) // 2
     for i, (a, b) in enumerate(zip(xs, xs[1:])):
         if i != mid:
-            bay_elev(s, a + 12.5, b - 12.5)
+            bay_elev(s, a + 12.5, b - 12.5, with_mesh=UN.get("rear_mesh", True))
             uprights(s, [a, b])
         s.dim(E(a, 0), E(b, 0), -14, key=f"rear zone {i + 1}", expect=UN["rear_zones"][i])
     lw_ = SG["interior_logo_w"]

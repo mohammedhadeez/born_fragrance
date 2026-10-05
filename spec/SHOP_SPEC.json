@@ -55,10 +55,10 @@
     "side_bays": "SUPERSEDED: 5 x 621.2 assumed the full 3106 side run; actual run depends on TBC #9 and #18",
     "floor_tile_cuts": "4 full courses + 2 x 348 in depth (4 x 600 + 5 x 2 grout + 2 x 348 = 3106); orientation TBC #22",
     "counter_position_x": [
-      250,
-      1250
+      700,
+      1700
     ],
-    "counter_side_clearance": "SUPERSEDED by confirmed.counter: 0 left, 900 right (escape)"
+    "counter_side_clearance": "450 each side (CHECK, < 900 escape assumption, #16)"
   },
   "exclusions": [
     "timber",
@@ -96,9 +96,9 @@
       "side_run_end": 3106,
       "side_bays": 4,
       "rear_zones": [
-        650,
-        600,
-        650
+        500,
+        900,
+        500
       ],
       "base_cab_h": 600,
       "plinth_h": 100,
@@ -117,12 +117,13 @@
         2200,
         2600
       ],
-      "fixing": "floor and walls; no fixing to gypsum ceiling (consultant to confirm, #16)"
+      "fixing": "floor and walls; no fixing to gypsum ceiling (consultant to confirm, #16)",
+      "rear_mesh": false
     },
     "counter": {
       "x": [
-        250,
-        1250
+        700,
+        1700
       ],
       "y_rear": 2156,
       "escape_min": 900,
@@ -130,7 +131,8 @@
         "w": 300,
         "h": 450,
         "z": 150
-      }
+      },
+      "note": "centred under the logo per render (owner 2026-10-05); 450 each side < 900 escape assumption: CHECK with consultant (#16)"
     },
     "lighting": {
       "cct": "3000K",
@@ -164,9 +166,9 @@
       "ratio": 2.2076,
       "exterior_logo_w": 1000,
       "exterior": "BLACK HALO-LIT LOGO ON 25 mm STAND-OFFS",
-      "interior_logo_w": 500,
+      "interior_logo_w": 600,
       "interior_logo_centre_z": 1900,
-      "interior_note": "500 W (not 600): the 600 logo zone has 25 mm uprights each side; 575 clear"
+      "interior_note": "600 W in the 900 logo zone (875 clear between 25 mm uprights)"
     },
     "floor": {
       "option": "A",

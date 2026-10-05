@@ -32,13 +32,14 @@ converted at 1:20) and the PDF MediaBox.
 | SD-02 | side bay 4 | 664 | DXF | 664 | YES |
 | SD-02 | side run | 2656 | DXF | 2656 | YES |
 | SD-02 | storefront column depth | 450 | DXF | 450 | YES |
-| SD-02 | rear zone 1 | 650 | DXF | 650 | YES |
-| SD-02 | rear zone 2 | 600 | DXF | 600 | YES |
-| SD-02 | rear zone 3 | 650 | DXF | 650 | YES |
+| SD-02 | rear zone 1 | 500 | DXF | 500 | YES |
+| SD-02 | rear zone 2 | 900 | DXF | 900 | YES |
+| SD-02 | rear zone 3 | 500 | DXF | 500 | YES |
 | SD-02 | internal width | 2400 | DXF | 2400 | YES |
 | SD-02 | counter width | 1000 | DXF | 1000 | YES |
 | SD-02 | counter depth | 450 | DXF | 450 | YES |
-| SD-02 | escape route beside counter | 900 | DXF | 900 | YES |
+| SD-02 | clearance right of counter | 450 | DXF | 450 | YES |
+| SD-02 | clearance left of counter | 450 | DXF | 450 | YES |
 | SD-02 | counter to rear unit | 700 | DXF | 700 | YES |
 | SD-02 | shell width (SVG) | 2400.0 | SVG | 2400 | YES |
 | SD-02 | shell height (SVG) | 3106.0 | SVG | 3106 | YES |
@@ -88,9 +89,9 @@ converted at 1:20) and the PDF MediaBox.
 | SD-06 | floor to ceiling | 2600 | DXF | 2600 | YES |
 | SD-06 | side unit depth L | 250 | DXF | 250 | YES |
 | SD-06 | side unit depth R | 250 | DXF | 250 | YES |
-| SD-06 | rear zone 1 | 650 | DXF | 650 | YES |
-| SD-06 | rear zone 2 | 600 | DXF | 600 | YES |
-| SD-06 | rear zone 3 | 650 | DXF | 650 | YES |
+| SD-06 | rear zone 1 | 500 | DXF | 500 | YES |
+| SD-06 | rear zone 2 | 900 | DXF | 900 | YES |
+| SD-06 | rear zone 3 | 500 | DXF | 500 | YES |
 | SD-06 | logo aspect ratio (w/h) | 2.208 | geometry | 2.2076 | YES |
 | SD-06 | interior logo centre height | 1900 | DXF | 1900 | YES |
 | SD-06 | counter width | 1000 | DXF | 1000 | YES |
