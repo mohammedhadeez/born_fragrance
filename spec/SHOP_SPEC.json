@@ -30,9 +30,10 @@
     },
     "signage": {
       "brand": "BORN FRAGRANCE",
-      "logo_asset": "assets/brand/born-fragrance-logo.svg",
-      "logo_note": "source artwork is cream (#fff4df); use black fill on drawings",
-      "logo_aspect_ratio": 2.2,
+      "logo_asset": "assets/brand/born-fragrance-logo-black.svg",
+      "logo_source": "assets/brand/born-fragrance-logo.svg",
+      "logo_note": "source artwork is cream (#fff4df) on a 1774x887 (2.0) canvas; the black asset has the same path data with its viewBox cropped to the artwork bounds (1419.5 x 643)",
+      "logo_aspect_ratio": 2.21,
       "exterior": "black backlit/halo-lit, size TBC",
       "interior": "smaller non-illuminated black logo, size and height TBC"
     }
@@ -46,8 +47,8 @@
   },
   "derived_proposals_unverified": {
     "clear_aisle_width": 1900,
-    "side_bays": "5 x 621.2",
-    "floor_tile_cuts": "4 full courses + 2 x 353 in depth",
+    "side_bays": "SUPERSEDED: 5 x 621.2 assumed the full 3106 side run; actual run depends on TBC #9 and #18",
+    "floor_tile_cuts": "4 full courses + 2 x 348 in depth (4 x 600 + 5 x 2 grout + 2 x 348 = 3106); orientation TBC #22",
     "counter_position_x": [700, 1700],
     "counter_side_clearance": "450 each side (CHECK, tight for staff)"
   },
