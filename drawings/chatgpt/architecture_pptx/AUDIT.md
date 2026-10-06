@@ -3,7 +3,7 @@
 Source repository snapshot: `eeccbde1cde8b3b40e75f30c1da98bf092c2f7eb`.
 Spec SHA-256: `58469767d64fed65cb53908ddbf3c5408fb7b5cdafefebd68b173381b6522c2b`.
 
-25 PPTX slides reopened successfully. LibreOffice exported every page to PDF. All pages have A3 landscape MediaBoxes and stable AP sheet numbers. All native shape extents remain on the slide. Embedded images are self-contained.
+24 PPTX slides reopened successfully. LibreOffice exported every page to PDF. All pages have A3 landscape MediaBoxes and stable AP sheet numbers. All native shape extents remain on the slide. Embedded images are self-contained.
 
 ## Geometry read back from written PPTX
 
@@ -11,7 +11,6 @@ Spec SHA-256: `58469767d64fed65cb53908ddbf3c5408fb7b5cdafefebd68b173381b6522c2b`
 |---|---|---|---|---|
 | AP-03 | internal-envelope | 2400.00 × 3106.00 | 2400 × 3106 | PASS |
 | AP-03 | counter-plan | 1000.00 × 450.00 | 1000 × 450 | PASS |
-| AP-04 | internal-envelope | 2400.00 × 3106.00 | 2400 × 3106 | PASS |
 | AP-05 | internal-envelope | 2400.00 × 3106.00 | 2400 × 3106 | PASS |
 | AP-06 | storefront-envelope | 2400.00 × 3200.00 | 2400 × 3200 | PASS |
 | AP-06 | door-leaf | 1000.00 × 2580.00 | 1000 × 2580 | PASS |
@@ -51,6 +50,7 @@ Spec SHA-256: `58469767d64fed65cb53908ddbf3c5408fb7b5cdafefebd68b173381b6522c2b`
 - Scale checks apply to named geometry objects at original A3 size, not to indicative hardware/assembly envelopes, images or axonometric projection.
 - Reference books named in the handoff were not supplied; no content has been attributed to them.
 - PowerPoint and PDF were checked programmatically; rendered sheet contact proofs were reviewed for presentation issues.
-- Rev C removes AP-02 and develops AP-03, AP-08, AP-09 and AP-10. AP-12–26 remain frozen; their original register is historical. Indicative bottles are an explicit owner exception to the loose-products exclusion.
+- Revision D removes AP-02 and AP-04. AP-12–26 remain frozen; their original register is historical. Indicative bottles are an explicit owner exception to the loose-products exclusion.
 - LOD 350 is a development target, not a certified achieved model status. Survey and unapproved connection details remain open.
-- Rev C paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The 10-page Review_C PPTX/PDF omits all paused sheets.
+- Paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The nine-page Review_D PPTX/PDF omits all paused sheets.
+- Rev D removes AP-04 as requested; the active Review_D is nine pages. AP-12–26 still compare pixel-identical to the original. Counter left-mesh front is an owner-directed visual revision; split and construction thicknesses remain TBC #16. The paused counter details retain the old insert and are not current design authority.

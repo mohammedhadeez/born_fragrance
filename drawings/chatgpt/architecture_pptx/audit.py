@@ -34,15 +34,16 @@ math_checks={'frontage':450+1500+450==2400,'glazing':4+488+4+1000+4==1500,
 assert all(math_checks.values())
 pdf=fitz.open(OUT/'BORN_FRAGRANCE_Architecture.pdf')
 assert len(pdf)==len(order)
-if manifest.get('revision')=='C':
+if manifest.get('revision') in ('C','D'):
     import subprocess
     baseline=fitz.open(stream=subprocess.check_output(['git','show','83d60a940ffe9859af6a13fc94b04012bdb9da98:drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Architecture.pdf'],cwd=OUT.parents[2]),filetype='pdf')
     for old_i in range(11,26):
         before=baseline[old_i].get_pixmap(matrix=fitz.Matrix(.7,.7),alpha=False)
-        after=pdf[old_i-1].get_pixmap(matrix=fitz.Matrix(.7,.7),alpha=False)
+        after=pdf[order.index(old_i+1)].get_pixmap(matrix=fitz.Matrix(.7,.7),alpha=False)
         assert before.samples==after.samples, f'Paused page {old_i+1} changed'
-    review=fitz.open();review.insert_pdf(pdf,from_page=0,to_page=9);review.save(OUT/'BORN_FRAGRANCE_Review_C.pdf');review.close()
-    assert len(Presentation(OUT/'BORN_FRAGRANCE_Review_C.pptx').slides)==10
+    rev=manifest['revision'];count=order.index(12)
+    review=fitz.open();review.insert_pdf(pdf,from_page=0,to_page=count-1);review.save(OUT/f'BORN_FRAGRANCE_Review_{rev}.pdf');review.close()
+    assert len(Presentation(OUT/f'BORN_FRAGRANCE_Review_{rev}.pptx').slides)==count
 (OUT/'svg').mkdir(exist_ok=True)
 previews=[]
 for i,page in enumerate(pdf):
@@ -50,20 +51,19 @@ for i,page in enumerate(pdf):
     assert abs(page.rect.height*25.4/72-297)<.1
     assert f'AP-{order[i]:02}' in page.get_text(),i+1
     target=OUT/'svg'/f'AP-{order[i]:02}.svg'
-    if manifest.get('revision')=='C' and order[i] not in (3,8,9,10):
+    if manifest.get('revision') in ('C','D') and order[i]>=12:
         target.write_bytes(subprocess.check_output(['git','show',f'83d60a940ffe9859af6a13fc94b04012bdb9da98:drawings/chatgpt/architecture_pptx/svg/AP-{order[i]:02}.svg'],cwd=OUT.parents[2]))
     else:
         svg=page.get_svg_image()
-        if order[i]==10:
-            # Keep raster media external in this SVG; PDF/PPTX stay self-contained.
-            # Long base64 pixel streams can trigger token-shaped false positives.
-            import base64, hashlib
-            def image_asset(match):
-                data=base64.b64decode(match.group(2));name='axon-'+hashlib.sha256(data).hexdigest()[:12]+('.png' if match.group(1)=='png' else '.jpg')
-                (OUT/'svg'/'media').mkdir(exist_ok=True)
-                (OUT/'svg'/'media'/name).write_bytes(data)
-                return 'media/'+name
-            svg=re.sub(r'data:image/(png|jpeg);base64,([A-Za-z0-9+/=\s]+)',image_asset,svg)
+        # Keep raster media external in SVG; PDF/PPTX stay self-contained.
+        # Long base64 pixel streams can trigger token-shaped false positives.
+        import base64, hashlib
+        def image_asset(match):
+            data=base64.b64decode(match.group(2));name='image-'+hashlib.sha256(data).hexdigest()[:12]+('.png' if match.group(1)=='png' else '.jpg')
+            (OUT/'svg'/'media').mkdir(exist_ok=True)
+            (OUT/'svg'/'media'/name).write_bytes(data)
+            return 'media/'+name
+        svg=re.sub(r'data:image/(png|jpeg);base64,([A-Za-z0-9+/=\s]+)',image_asset,svg)
         target.write_text(svg)
     pix=page.get_pixmap(matrix=fitz.Matrix(.65,.65),alpha=False)
     img=Image.frombytes('RGB',(pix.width,pix.height),pix.samples)
@@ -90,9 +90,10 @@ md=['# Read-back audit','',f"Source repository snapshot: `{manifest['source_comm
     '- Scale checks apply to named geometry objects at original A3 size, not to indicative hardware/assembly envelopes, images or axonometric projection.',
     '- Reference books named in the handoff were not supplied; no content has been attributed to them.',
     '- PowerPoint and PDF were checked programmatically; rendered sheet contact proofs were reviewed for presentation issues.',
-    '- Rev C removes AP-02 and develops AP-03, AP-08, AP-09 and AP-10. AP-12–26 remain frozen; their original register is historical. Indicative bottles are an explicit owner exception to the loose-products exclusion.',
+    '- Revision D removes AP-02 and AP-04. AP-12–26 remain frozen; their original register is historical. Indicative bottles are an explicit owner exception to the loose-products exclusion.',
     '- LOD 350 is a development target, not a certified achieved model status. Survey and unapproved connection details remain open.',
-    '- Rev C paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The 10-page Review_C PPTX/PDF omits all paused sheets.',
+    '- Paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The nine-page Review_D PPTX/PDF omits all paused sheets.',
+    '- Rev D removes AP-04 as requested; the active Review_D is nine pages. AP-12–26 still compare pixel-identical to the original. Counter left-mesh front is an owner-directed visual revision; split and construction thicknesses remain TBC #16. The paused counter details retain the old insert and are not current design authority.',
     '']
 (OUT/'AUDIT.md').write_text('\n'.join(md))
 print(f'PASS: {len(p.slides)} slides, {len(rows)} native geometry read-backs, 9 dimensional chains, PDF pages and extents.')

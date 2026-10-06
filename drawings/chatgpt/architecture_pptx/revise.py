@@ -23,7 +23,13 @@ def clean(i,subtitle):
 def tag(s,x,y,n,color=INK):
     circle(s,x,y,3.3,color,PAPER);txt(s,x-2,y-1.6,5,5,n,8,color,bold=True)
 def leadtag(s,v,x,y,u,z,n):
-    a,b=v.p(x,y);line(s,a,b,u-4,z,GREY,.55);tag(s,u,z,n)
+    labels={'01':'RECESSED PLINTH / BASE','02':'BLACK TRAY / WARM LED','03':'EXPANDED METAL MESH'}
+    isplan=v.y==238
+    if isplan:labels={'01':'250 DEEP DISPLAY','02':'1000 × 450 COUNTER','03':'PIVOT GLASS DOOR'}
+    a,b=v.p(x,y)
+    labelx=u-12 if isplan else 226
+    line(s,a,b,labelx,z,GREY,.55)
+    txt(s,labelx,z+2,57,14,labels[n],8,INK)
 def tinybottle(v,x,z,style=0):
     # Indicative symbols only: never dimensions, schedules or quantities.
     widths=[50,62,44];heights=[95,120,105];w=widths[style%3];h=heights[style%3]
@@ -78,11 +84,13 @@ v.bar(0,-580,1000)
 # AP-08 / AP-09: accurately sized steel members, mesh, trays, lights and sparse props.
 for i,reverse in [(8,False),(9,True)]:
     s=clean(i,'Developed display elevation · interfaces + material codes · bottles indicative only')
-    notes(s,[('01 / STEEL FRAME','25 × 25 × 1.6 main SHS; 20 × 20 × 1.6 secondary supports. 664 module is not a fabrication cut size.'),('02 / SHELF + LIGHT','3 mm tray / 25 downstand / 250 depth. Concealed 3000 K LED behind front edge; see section inset.'),('03 / BASE + MESH','600 base includes 100 recessed plinth. 1.5 PPC doors. Mesh at 2200–2600; approximate 20 × 40 diamonds.'),('04 / INDICATIVE CONTENT','Sparse fragrance bottles added at owner request for visual scale only. Excluded from dimensions and schedules. Fixings and cable routing #16 remain open.')])
+    notes(s,[('STEEL FRAME','25 × 25 × 1.6 main SHS; 20 × 20 × 1.6 secondary supports. 664 module is not a fabrication cut size.'),('SHELF + LIGHT','3 mm tray / 25 downstand / 250 depth. Concealed 3000 K LED behind front edge; see section inset.'),('BASE + MESH','600 base includes 100 recessed plinth. 1.5 PPC doors. Mesh at 2200–2600; approximate 20 × 40 diamonds.'),('INDICATIVE CONTENT','Fragrance silhouettes show scale and use. Fixings and cable routing #16 remain open. The solid column return has street-facing displays around the corner.')])
     v=View(s,51,222,20);v.r(0,0,D,H,'F1EBE0',name='side-envelope')
     start=0 if reverse else 450;end=start+2656;col=2656 if reverse else 0
     v.r(col,0,450,H,'DDD5C6');v.r(col+25,25,400,2550,None,GREY)
-    for z in C['units']['shelf_levels']:v.l(col+25,z,col+425,z,GREY,.5)
+    # Opaque return: shelves face the street, not this internal elevation.
+    v.r(col,0,25,H,INK);v.r(col+425,0,25,H,INK)
+    v.t(col+55,1700,'SOLID\nCOLUMN\nRETURN\n\nDISPLAY\nFACES\nSTREET',19,7,GREY)
     v.r(start,0,2656,100,'51534E');v.r(start,100,2656,500,'DED8CD')
     v.r(start,2200,2656,400,'D3CCBD')
     # Nominal mesh pitch at correct geometry; thin lines remain subordinate.
@@ -107,12 +115,15 @@ for i,reverse in [(8,False),(9,True)]:
     for k in range(4):v.dim(start+k*664,0,start+(k+1)*664,0,8)
     for z0,z1 in [(0,100),(100,600),(600,1000),(1000,1400),(1400,1800),(1800,2200),(2200,2600)]:v.dim(D,z0,D,z1,9)
     leadtag(s,v,start+1328,2400,270,96,'03');leadtag(s,v,start+1900,1390,270,139,'02');leadtag(s,v,start+1328,150,270,209,'01')
-    txt(s,22, 61,260,9,'M01 / BLACK STEEL    M02 / NEUTRAL PPC    M05 / MESH    L03 / 3000 K LED',8,GOLD)
+    txt(s,22,61,260,9,'BLACK STEEL  /  NEUTRAL PPC  /  EXPANDED MESH  /  3000 K LED',8,GOLD)
     # Section inset uses only the approved depth and steel sizes.
     u=View(s,234,185,5);u.r(0,0,250,3,INK);u.r(247,-22,3,25,INK);u.r(15,-20,20,20,None,INK)
-    u.dim(0,3,250,3,-6);txt(s,234,192,53,8,'SHELF SECTION 1:5',7,GREY)
+    u.dim(0,3,250,3,-6);txt(s,234,192,53,8,'SHELF SECTION 1:5',8,GREY)
+    txt(s,226,201,60,15,'3 mm tray · 25 downstand\n20 × 20 support · LED below',8,GREY)
     v.bar(0,-700,1000)
     txt(s,117,249,170,12,'INDICATIVE BOTTLES · NOT A STOCK / CAPACITY SCHEDULE',7.5,GREY)
+
+exec(compile((OUT/'revision_d.py').read_text(),str(OUT/'revision_d.py'),'exec'))
 
 # AP-10: shaded 3D cutaway from approved geometry, not a traced render.
 import matplotlib
@@ -172,7 +183,14 @@ for x in (250,1650):
     for xx in (x,x+475):box(xx,2856,0,25,25,2600,'#242725')
     for z in C['units']['shelf_levels']:box(x,2856,z-25,500,250,25,'#282B28')
 box(700,1706,0,1000,450,880,'#D4C6AF');box(700,1706,880,1000,450,20,'#ECE5D7')
-box(1050,1704,150,300,2,450,'#494941')
+box(720,1703,55,330,3,805,'#494941')
+for xx in (700,1040,1680):box(xx,1700,20,20,20,860,'#252725')
+box(700,1700,20,1000,20,20,'#252725')
+for k in range(-402,350,20):
+    lo=max(0,k);hi=min(330,k+805/2)
+    if hi>lo:
+        ax.plot([720+lo,720+hi],[1702,1702],[55+2*(lo-k),55+2*(hi-k)],color='#30312B',lw=.5)
+        ax.plot([720+lo,720+hi],[1702,1702],[860-2*(lo-k),860-2*(hi-k)],color='#30312B',lw=.5)
 for x in (0,1950):
     top=2600 if x==0 else 900
     box(x,0,0,450,450,top,'#C9BDA5')
@@ -240,7 +258,7 @@ s.shapes.add_picture(str(OUT/'axonometric_revC.png'),Mm(22),Mm(51),width=Mm(245)
 txt(s,24,257,255,10,'CUTAWAY AXONOMETRIC · NTS · ceiling and near-side upper joinery omitted',8,GREY)
 
 # Suppress theme effects only on changed sheets.
-for i in (3,8,9,10):
+for i in (3,5,6,7,8,9,10):
     for sh in prs.slides[i-1].shapes:
         style=sh._element.find('{http://schemas.openxmlformats.org/presentationml/2006/main}style')
         if style is not None:sh._element.remove(style)
@@ -248,13 +266,20 @@ for i in (3,8,9,10):
         if sppr is not None:sppr.append(OxmlElement('a:effectLst'))
 assert frozen==[s._element.xml for s in list(prs.slides)[11:]],'Paused sheets changed'
 # Remove original AP-02; preserve stable drawing numbers and frozen register.
-entry=prs.slides._sldIdLst[1];prs.part.drop_rel(entry.rId);prs.slides._sldIdLst.remove(entry)
+for pos in (3,1):
+    entry=prs.slides._sldIdLst[pos];prs.part.drop_rel(entry.rId);prs.slides._sldIdLst.remove(entry)
+for slide in list(prs.slides)[:9]:
+    for sh in slide.shapes:
+        if sh.has_text_frame:
+            for p in sh.text_frame.paragraphs:
+                for r in p.runs:
+                    r.text=re.sub(r'\b(?:0[1-4]|[MGL]0[1-5]) / ','',r.text).replace('REV C','REV D').replace('REV B','REV D')
 prs.save(OUT/'BORN_FRAGRANCE_Architecture.pptx')
-for entry in list(prs.slides._sldIdLst)[10:]:
+for entry in list(prs.slides._sldIdLst)[9:]:
     prs.part.drop_rel(entry.rId);prs.slides._sldIdLst.remove(entry)
-prs.save(OUT/'BORN_FRAGRANCE_Review_C.pptx')
-manifest['revision']='C';manifest['removed_sheet']='AP-02';manifest['frozen_sheets']='AP-12 to AP-26'
-manifest['sheet_order']=[1]+list(range(3,27))
-manifest['checks']=[dict(c,slide=c['slide']-1 if c['slide']>2 else c['slide']) for c in manifest['checks']]
+prs.save(OUT/'BORN_FRAGRANCE_Review_D.pptx')
+manifest['revision']='D';manifest['removed_sheet']='AP-02, AP-04';manifest['frozen_sheets']='AP-12 to AP-26'
+manifest['sheet_order']=[i for i in range(1,27) if i not in (2,4)]
+manifest['checks']=[dict(c,slide=manifest['sheet_order'].index(c['slide'])+1) for c in manifest['checks'] if c['slide'] not in (2,4)]
 (OUT/'geometry_manifest.json').write_text(json.dumps(manifest,indent=2))
-print('Rev C: 25 slides; AP-02 removed; AP-03/08/09/10 revised; AP-12–26 XML unchanged.')
+print('Rev D: 24 slides; AP-02/04 removed; nine-page review; AP-12–26 XML unchanged.')
