@@ -1,0 +1,264 @@
+{
+  "source_commit": "eeccbde1cde8b3b40e75f30c1da98bf092c2f7eb",
+  "spec_sha256": "58469767d64fed65cb53908ddbf3c5408fb7b5cdafefebd68b173381b6522c2b",
+  "checks": [
+    {
+      "slide": 3,
+      "shape": "GEOM:internal-envelope",
+      "w": 2400,
+      "h": 3106,
+      "scale": 20
+    },
+    {
+      "slide": 3,
+      "shape": "GEOM:counter-plan",
+      "w": 1000,
+      "h": 450,
+      "scale": 20
+    },
+    {
+      "slide": 4,
+      "shape": "GEOM:internal-envelope",
+      "w": 2400,
+      "h": 3106,
+      "scale": 20
+    },
+    {
+      "slide": 5,
+      "shape": "GEOM:internal-envelope",
+      "w": 2400,
+      "h": 3106,
+      "scale": 20
+    },
+    {
+      "slide": 6,
+      "shape": "GEOM:storefront-envelope",
+      "w": 2400,
+      "h": 3200,
+      "scale": 20
+    },
+    {
+      "slide": 6,
+      "shape": "GEOM:door-leaf",
+      "w": 1000,
+      "h": 2580,
+      "scale": 20
+    },
+    {
+      "slide": 7,
+      "shape": "GEOM:internal-envelope",
+      "w": 2400,
+      "h": 2600,
+      "scale": 20
+    },
+    {
+      "slide": 7,
+      "shape": "GEOM:counter-elevation",
+      "w": 1000,
+      "h": 900,
+      "scale": 20
+    },
+    {
+      "slide": 8,
+      "shape": "GEOM:side-envelope",
+      "w": 3106,
+      "h": 2600,
+      "scale": 20
+    },
+    {
+      "slide": 9,
+      "shape": "GEOM:side-envelope",
+      "w": 3106,
+      "h": 2600,
+      "scale": 20
+    },
+    {
+      "slide": 13,
+      "shape": "GEOM:shelf-section",
+      "w": 250,
+      "h": 3,
+      "scale": 2
+    },
+    {
+      "slide": 13,
+      "shape": "GEOM:secondary-shs",
+      "w": 20,
+      "h": 20,
+      "scale": 2
+    },
+    {
+      "slide": 14,
+      "shape": "GEOM:mesh-zone",
+      "w": 664,
+      "h": 400,
+      "scale": 5
+    },
+    {
+      "slide": 15,
+      "shape": "GEOM:door-glass-head",
+      "w": 12,
+      "h": 40,
+      "scale": 2
+    },
+    {
+      "slide": 20,
+      "shape": "GEOM:counter-top",
+      "w": 1000,
+      "h": 450,
+      "scale": 10
+    },
+    {
+      "slide": 20,
+      "shape": "GEOM:counter-front",
+      "w": 1000,
+      "h": 900,
+      "scale": 10
+    },
+    {
+      "slide": 20,
+      "shape": "GEOM:mesh-insert",
+      "w": 300,
+      "h": 450,
+      "scale": 10
+    },
+    {
+      "slide": 20,
+      "shape": "GEOM:counter-section",
+      "w": 450,
+      "h": 900,
+      "scale": 10
+    }
+  ],
+  "sheets": [
+    [
+      "AP-01",
+      "Retail interior / coordinated design",
+      "NTS"
+    ],
+    [
+      "AP-02",
+      "Drawing basis / document hierarchy",
+      "NTS"
+    ],
+    [
+      "AP-03",
+      "Overall plan / setting-out",
+      "1:20"
+    ],
+    [
+      "AP-04",
+      "Floor finish / module setting-out",
+      "1:20"
+    ],
+    [
+      "AP-05",
+      "Ceiling / lighting coordination",
+      "1:20"
+    ],
+    [
+      "AP-06",
+      "Storefront / external elevation",
+      "1:20"
+    ],
+    [
+      "AP-07",
+      "Rear focal wall / internal elevation",
+      "1:20"
+    ],
+    [
+      "AP-08",
+      "Left display / internal elevation",
+      "1:20"
+    ],
+    [
+      "AP-09",
+      "Right display / internal elevation",
+      "1:20"
+    ],
+    [
+      "AP-10",
+      "Spatial assembly / cutaway axonometric",
+      "NTS"
+    ],
+    [
+      "AP-11",
+      "Material palette / visible finishes",
+      "NTS"
+    ],
+    [
+      "AP-12",
+      "Display module / fabrication logic",
+      "1:10"
+    ],
+    [
+      "AP-13",
+      "Shelf / frame / concealed LED",
+      "1:2"
+    ],
+    [
+      "AP-14",
+      "Mesh / lighting / service access",
+      "1:5 / NTS"
+    ],
+    [
+      "AP-15",
+      "Storefront head / structural interface",
+      "1:2 \u2014 indicative assembly"
+    ],
+    [
+      "AP-16",
+      "Glazed entrance / jamb and pivot",
+      "1:5"
+    ],
+    [
+      "AP-17",
+      "Flush threshold / floor interface",
+      "1:2 \u2014 indicative assembly"
+    ],
+    [
+      "AP-18",
+      "Halo-lit sign / demountable backing",
+      "1:2 \u2014 indicative assembly"
+    ],
+    [
+      "AP-19",
+      "Rear wall / display-to-wall connection",
+      "1:5 \u2014 indicative assembly"
+    ],
+    [
+      "AP-20",
+      "Counter / plan, elevation and section",
+      "1:10"
+    ],
+    [
+      "AP-21",
+      "Counter / services and removable access",
+      "1:5 \u2014 indicative assembly"
+    ],
+    [
+      "AP-22",
+      "Finish junctions / controlled terminations",
+      "1:2 \u2014 indicative assemblies"
+    ],
+    [
+      "AP-23",
+      "Technical specification / coordinated schedule",
+      "NTS"
+    ],
+    [
+      "AP-24",
+      "Installation / quality and maintenance sequence",
+      "NTS"
+    ],
+    [
+      "AP-25",
+      "Open decisions / consultant coordination",
+      "NTS"
+    ],
+    [
+      "AP-26",
+      "Drawing register / dimensional close-out",
+      "NTS"
+    ]
+  ]
+}
