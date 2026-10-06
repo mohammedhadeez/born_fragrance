@@ -6,11 +6,17 @@ Source: repository `spec/SHOP_SPEC.json` (including owner-confirmed Rev A), `spe
 
 The three books named in the handoff were not attached or available in the repository. No pages or technical claims are attributed to them. Assembly details are proposed coordination strategies, not engineered or manufacturer-approved fabrication instructions.
 
-New detail decisions remain in clouds under TBC #16/#26. Surveyed dimensions are not available. Confirmed design dimensions, site assumptions and unapproved fabrication decisions are distinguished throughout. Existing spec and Claude files are unchanged.
+Active review sheets use concise connection-specific TBC notes; the owner requested removing their clouds. The paused archive retains its historical clouds. Surveyed dimensions are not available. Existing spec and Claude files are unchanged.
 
-Build the current revision with `python3 drawings/chatgpt/architecture_pptx/review_f.py` (python-pptx). It loads committed revision E and the saved edited render. Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. `review_e.py` reproduces E; `build.py` reproduces B; `revise.py` reproduces D.
+Build the current revision with `PYTHONPATH=/tmp/bf-ppt-libs python3 drawings/chatgpt/architecture_pptx/review_g.py` (python-pptx, CairoSVG). It loads pinned committed revision F. Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. Older generators reproduce their corresponding historical revisions.
 
-## Current review — revision F
+## Current review — revision G
+
+Use `BORN_FRAGRANCE_Review_G.pptx` / `.pdf` for the eight active sheets. All seven technical sheets have revised native annotations: aligned direct descriptions, consistent title/body typography, horizontal leader terminals and corrected shelf, plinth, glass, track and branding targets. Dimension numbers are centred; side pitch figures sit outside their dimension line. The axonometric has an editable picture crop to remove unused raster space and shorter leaders on aligned left/right columns. The five-image cover arrangement from F is retained.
+
+The audit checks all 27 new callouts for overlapping text boxes and leader intersections with exported PDF text, alongside the existing A3, geometry and dimensional-chain checks. Named measured geometry is unchanged; the 15 paused slides are unchanged in XML and PDF rendering. This presentation cleanup does not resolve the documented TBC decisions or certify LOD 350.
+
+## Previous review — revision F
 
 Use `BORN_FRAGRANCE_Review_F.pptx` / `.pdf`: eight active sheets, AP-01, AP-03, AP-05–10. The owner-selected material palette AP-11 is removed. The full Architecture package has 23 sheets, including the 15 unchanged paused archive sheets AP-12–26.
 
