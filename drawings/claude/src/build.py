@@ -272,11 +272,14 @@ class Sheet:
         self.text((x, y - 10.5), "NORTH TBC #23*", h=1.6, ha="center", layer="A-TBC-CLOUD")
 
     # render -----------------------------------------------------------------
-    def render(self, stem, pdf):
-        fig = plt.figure(figsize=(A3[0] / 25.4, A3[1] / 25.4))
+    def render(self, stem, pdf, crop=None):
+        """Write the sheet. With crop=(x0, y0, x1, y1) in paper mm, write only a
+        cropped SVG + PNG view to stem (a path without suffix), for presentations."""
+        x0, y0, x1, y1 = crop or (0, 0, *A3)
+        fig = plt.figure(figsize=((x1 - x0) / 25.4, (y1 - y0) / 25.4))
         ax = fig.add_axes([0, 0, 1, 1])
-        ax.set_xlim(0, A3[0])
-        ax.set_ylim(0, A3[1])
+        ax.set_xlim(x0, x1)
+        ax.set_ylim(y0, y1)
         ax.set_aspect("equal")
         ax.axis("off")
         doc = ezdxf.new("R2018", setup=True)
@@ -393,6 +396,11 @@ class Sheet:
                 dim.render()
                 self.dims[idx]["handle"] = dim.dimension.dxf.handle
 
+        if crop:
+            fig.savefig(f"{stem}.svg", format="svg")
+            fig.savefig(f"{stem}.png", dpi=200)
+            plt.close(fig)
+            return
         fig.savefig(OUT / f"{stem}.svg", format="svg")
         fig.savefig(OUT / "preview" / f"{stem}.png", dpi=110)
         fig.savefig(OUT / f"{stem}.pdf", format="pdf")
