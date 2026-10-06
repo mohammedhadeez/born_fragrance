@@ -8,9 +8,19 @@ The three books named in the handoff were not attached or available in the repos
 
 New detail decisions remain in clouds under TBC #16/#26. Surveyed dimensions are not available. Confirmed design dimensions, site assumptions and unapproved fabrication decisions are distinguished throughout. Existing spec and Claude files are unchanged.
 
-Build the current revision with `python3 drawings/chatgpt/architecture_pptx/review_e.py` (python-pptx, cairosvg, Pillow, matplotlib, numpy). Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. The original `build.py` reproduces Rev B; `revise.py` reproduces Rev D.
+Build the current revision with `python3 drawings/chatgpt/architecture_pptx/review_f.py` (python-pptx). It loads committed revision E and the saved edited render. Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. `review_e.py` reproduces E; `build.py` reproduces B; `revise.py` reproduces D.
 
-## Current review — revision E
+## Current review — revision F
+
+Use `BORN_FRAGRANCE_Review_F.pptx` / `.pdf`: eight active sheets, AP-01, AP-03, AP-05–10. The owner-selected material palette AP-11 is removed. The full Architecture package has 23 sheets, including the 15 unchanged paused archive sheets AP-12–26.
+
+The reference board on the cover is replaced by `born-fragrance-shop-neutral.png`, an image-generation-tool edit of the original render to reduce the reddish/orange cast, restore neutral ivory/beige material tones and retain gently warm lighting. The edited board remains design intent only; the original `assets/renders/born-fragrance-shop.png` is untouched. Technical drawings and their dimensions are unchanged. The edited image is saved locally so rebuilding F does not invoke image generation again.
+
+The cover no longer displays the entire collage as one image. Five independently editable picture frames crop the saved board into a large storefront view, a supporting interior view, and three aligned details with direct captions. The material swatches are omitted from this gallery. Crop/frame aspect ratios are verified so the images are not stretched. `BORN_FRAGRANCE_Render_Layout_F.png` is the exported cover preview.
+
+Run `python3 drawings/chatgpt/architecture_pptx/review_f.py`, export the full Architecture PPTX using the LibreOffice command below, then run `audit.py`. Earlier review files are historical snapshots. The LOD assessment in `LOD_REVIEW_E.md` still applies to the technical views; its page-nine palette entry is now omitted.
+
+## Previous review — revision E
 
 Open `BORN_FRAGRANCE_Review_E.pdf` or the editable `BORN_FRAGRANCE_Review_E.pptx`. All nine active slides now omit the three footer fields, narrative sidebars and cloud graphics selected by the owner. The header remains. New drawing interfaces occupy the former sidebar area: rear/side corner, pivot edge, unit head/ceiling, folded tray/LED, recessed plinth, halo stand-off and counter footprint. The axonometric has thin trays, depth-tested edges, a consistent 600 cut, exploded ceiling tracks with projection guides, and native editable leaders anchored to model coordinates.
 

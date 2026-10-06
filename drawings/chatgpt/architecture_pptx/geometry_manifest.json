@@ -66,56 +66,56 @@
       "scale": 20
     },
     {
-      "slide": 11,
+      "slide": 10,
       "shape": "GEOM:shelf-section",
       "w": 250,
       "h": 3,
       "scale": 2
     },
     {
-      "slide": 11,
+      "slide": 10,
       "shape": "GEOM:secondary-shs",
       "w": 20,
       "h": 20,
       "scale": 2
     },
     {
-      "slide": 12,
+      "slide": 11,
       "shape": "GEOM:mesh-zone",
       "w": 664,
       "h": 400,
       "scale": 5
     },
     {
-      "slide": 13,
+      "slide": 12,
       "shape": "GEOM:door-glass-head",
       "w": 12,
       "h": 40,
       "scale": 2
     },
     {
-      "slide": 18,
+      "slide": 17,
       "shape": "GEOM:counter-top",
       "w": 1000,
       "h": 450,
       "scale": 10
     },
     {
-      "slide": 18,
+      "slide": 17,
       "shape": "GEOM:counter-front",
       "w": 1000,
       "h": 900,
       "scale": 10
     },
     {
-      "slide": 18,
+      "slide": 17,
       "shape": "GEOM:mesh-insert",
       "w": 300,
       "h": 450,
       "scale": 10
     },
     {
-      "slide": 18,
+      "slide": 17,
       "shape": "GEOM:counter-section",
       "w": 450,
       "h": 900,
@@ -275,8 +275,8 @@
       "NTS"
     ]
   ],
-  "revision": "E",
-  "removed_sheet": "AP-02, AP-04",
+  "revision": "F",
+  "removed_sheet": "AP-02, AP-04, AP-11",
   "frozen_sheets": "AP-12 to AP-26",
   "sheet_order": [
     1,
@@ -287,7 +287,6 @@
     8,
     9,
     10,
-    11,
     12,
     13,
     14,
@@ -304,7 +303,7 @@
     25,
     26
   ],
-  "review_source_commit": "8d176ad8f12c98729205d55a98d00aba001f485b",
+  "review_source_commit": "4b9961785e3f0186bf866d3cd2b84c1134cf03ec",
   "slide_titles": [
     "Retail interior / coordinated design",
     "Overall plan / setting-out",
@@ -314,7 +313,6 @@
     "Left display / internal elevation",
     "Right display / internal elevation",
     "Spatial assembly / cutaway axonometric",
-    "Material palette / visible finishes",
     "Display module / fabrication logic",
     "Shelf / frame / concealed LED",
     "Mesh / lighting / service access",
@@ -330,5 +328,82 @@
     "Installation / quality and maintenance sequence",
     "Open decisions / consultant coordination",
     "Drawing register / dimensional close-out"
+  ],
+  "render_gallery": [
+    {
+      "name": "VIEW:Storefront",
+      "frame_mm": [
+        17,
+        58,
+        185,
+        205
+      ],
+      "crop_px": [
+        0.08536585365851579,
+        0,
+        676.9146341463415,
+        750
+      ]
+    },
+    {
+      "name": "VIEW:Interior",
+      "frame_mm": [
+        216,
+        58,
+        189,
+        117
+      ],
+      "crop_px": [
+        0,
+        762.3571428571429,
+        645,
+        1161.642857142857
+      ]
+    },
+    {
+      "name": "VIEW:Mesh and lighting",
+      "frame_mm": [
+        216.0,
+        199,
+        59.666666666666664,
+        72
+      ],
+      "crop_px": [
+        707.5578703703704,
+        0,
+        1056.4421296296296,
+        421
+      ]
+    },
+    {
+      "name": "VIEW:Display frame",
+      "frame_mm": [
+        280.6666666666667,
+        199,
+        59.666666666666664,
+        72
+      ],
+      "crop_px": [
+        709,
+        805.1284916201117,
+        969,
+        1118.8715083798884
+      ]
+    },
+    {
+      "name": "VIEW:Plaster and shelf",
+      "frame_mm": [
+        345.33333333333337,
+        199,
+        59.666666666666664,
+        72
+      ],
+      "crop_px": [
+        1052,
+        794.268156424581,
+        1330,
+        1129.731843575419
+      ]
+    }
   ]
 }
