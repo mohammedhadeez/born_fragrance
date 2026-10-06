@@ -1,0 +1,1093 @@
+{
+  "stage": "BORN FRAGRANCE architectural presentation",
+  "recorded_at": "2026-10-06T22:28:29.898955+03:00",
+  "revision": "I",
+  "branches_before_closure": [
+    {
+      "branch": "chatgpt/architecture-pptx",
+      "sha": "771782a7f75645151792653477e25a38223a383a"
+    },
+    {
+      "branch": "chatgpt/portrait-presentation",
+      "sha": "d21be2455ec9b77c3066f6efb025077c888e6064"
+    },
+    {
+      "branch": "chatgpt/tbc-answers",
+      "sha": "8a0a590585029b91ef7aba50c6451aa82922c1bc"
+    },
+    {
+      "branch": "claude/great-goldberg-anh45q",
+      "sha": "fee3c8ed2aeed61eceab97275f4bacb1f5bb2a82"
+    },
+    {
+      "branch": "main",
+      "sha": "0e28b4e7d585d76575b59c0f3fcc49b688620648"
+    }
+  ],
+  "files": [
+    {
+      "path": "drawings/chatgpt/architecture_pptx/.gitignore",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/AUDIT.md",
+      "bytes": 5775,
+      "sha256": "1a4024dfd7e4d021a610a274d560a6bad3efcf0d5090b80da09b58aff27c3486"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Architecture.pdf",
+      "bytes": 2232778,
+      "sha256": "60ada94a2075b696bc07d529c81cc39fc87b101447f5f320319bb501e2aca0de"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Architecture.pptx",
+      "bytes": 5572201,
+      "sha256": "d3390332ad6de7f28744d87cb10b60c64bc1a280f77d1ab46f7c41d3b77a58f7"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Render_Layout_F.png",
+      "bytes": 2407036,
+      "sha256": "28061c31e04d66c784947ad308d448b628fab70f30d9760e2ed7171a61ce1a18"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_C.pdf",
+      "bytes": 915018,
+      "sha256": "ea1c3a5042d17bf1f7852caad2037d2b0f2af6323e7bc7c00e3abdd6d80b106f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_C.pptx",
+      "bytes": 2582347,
+      "sha256": "561e149d8684ed531fd66728bc9943861bfbc09266f06b0ff1de2bc72012092e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_D.pdf",
+      "bytes": 936319,
+      "sha256": "368f1a42ec108b0cf5b098f99877711f6657cd28765cc088a8402f690c422f96"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_D.pptx",
+      "bytes": 2625583,
+      "sha256": "c7b14206bd5266c2789b19dd3be8f7ed6464209a72cc60f56679c4b60fb92196"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_E.pdf",
+      "bytes": 1046659,
+      "sha256": "d481a1a719013f0dba22ea877d257b02300c54bc62a1020ad3debfe18c5f015d"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_E.pptx",
+      "bytes": 3113426,
+      "sha256": "c7929aa5e0a024b06fd38adc77ebec58b6aadbf171970dc20a16e3c0aaa95a5f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_F.pdf",
+      "bytes": 1044797,
+      "sha256": "ae1ddf769bf1335f328382e1a44d84ccb6501f93c2cd540da1307b711359c05c"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_F.pptx",
+      "bytes": 5434086,
+      "sha256": "fdd8143e1a94cea7bc831d4c07e7d11ec221f9fec6ca53d54743454e4315fc3b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_G.pdf",
+      "bytes": 1235936,
+      "sha256": "19b1234ae7594381cb971cb7031af25123822b39ed40678cd9d683cdcbf0c6a5"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_G.pptx",
+      "bytes": 5436457,
+      "sha256": "afc419bb7b41af2fe05094b6933ffa30fbf662417ec8951135c5b6b988c61315"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_H.pdf",
+      "bytes": 1237273,
+      "sha256": "b26d6ef349d7b69691ec99cab596bdbf33e4befc1b6276f2c2851e289fa55b56"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_H.pptx",
+      "bytes": 5435982,
+      "sha256": "9ad2bfb1b5cd0d8877f127f32c33c4fff062187769be656575eb77a25bc2bde2"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_I.pdf",
+      "bytes": 1491836,
+      "sha256": "ec2cf5c6c72165adcfadc42113fb50fe2a8f0dee69d192168bdb25c65777736f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Review_I.pptx",
+      "bytes": 5438376,
+      "sha256": "83c8f872c01edf9ece3044399cec0f79a63ee13088b2da2e78d84e9e7b1f48a2"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/LOD_REVIEW_E.md",
+      "bytes": 5598,
+      "sha256": "d2426678f5a0a606b2aa7c23b7503af56d19563966fb64545778a8eb4ac47592"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/README.md",
+      "bytes": 10215,
+      "sha256": "23d1d9c05ee46aca5f0cc4bec40ac800aee1057061f0edd07b5998b1ad8590e5"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/audit.py",
+      "bytes": 13245,
+      "sha256": "49c41932d275fa1d680c27f97e7d8977911afe01358d810ab51118768006e251"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/axon_e.py",
+      "bytes": 8430,
+      "sha256": "854098737ce9216e2370756b71c68ddca6be57617c3186edd9c18b2755d683c6"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/axonometric_revC.png",
+      "bytes": 243007,
+      "sha256": "2fbf7b1b882b1c45fa2caeb858baa4a4a5db4d01dccc291d7573e3e425f79f5f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/axonometric_revE.png",
+      "bytes": 534707,
+      "sha256": "69357ea3333040b6734326de1853b5e286e51ede7f67f2bbf90a83ec236a185a"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/born-fragrance-shop-neutral.png",
+      "bytes": 2335352,
+      "sha256": "4d59cc6fd59d316c61aec7eba82b0e56a21912139dde6ab6c503b083dc523be4"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/build.py",
+      "bytes": 37331,
+      "sha256": "7f9f8de06ba9de8ccdb62bb1591a7652b936203367e20840214992e1ab616e36"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/geometry_manifest.json",
+      "bytes": 17218,
+      "sha256": "acca26e31e7bf144b444a8d6c7b5589b07d5f0ccf8999196342aa5cd2b71c48c"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/logo.png",
+      "bytes": 46502,
+      "sha256": "218e99f76f6b88b5fc81f497e4565cb47f9543b20071a2c76bdf0075b49862d0"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/review_e.py",
+      "bytes": 9126,
+      "sha256": "2e08ef07a04327ad4967b8949a51d5b515ec8c89892b6b474291421d1b9d1f5d"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/review_f.py",
+      "bytes": 3264,
+      "sha256": "5589a96fa08b7f961068ccccce87804bc8137b110119704e721b81038f441aea"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/review_g.py",
+      "bytes": 7395,
+      "sha256": "49ac87914dbe76f24066613a1ae4250a932233a123871e954a1df613b6f491da"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/review_h.py",
+      "bytes": 2276,
+      "sha256": "e6138539bd6bb533e7e6ebc051ef6e5fb002272cd9a9fd3ddcc15b0c7facd741"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/review_i.py",
+      "bytes": 6839,
+      "sha256": "7ccd63fa4615cea2c4297163c752b63159a3f7c9548c5a0db6e5540ad794dc8f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/revise.py",
+      "bytes": 18482,
+      "sha256": "834e8fc61923d688ec3f4ca6f367e917eff206d89b1bedc45e644ebfcfddb078"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/revision_d.py",
+      "bytes": 6937,
+      "sha256": "02bcc8e3c5b410c36243eafc839bbe56591c8814eeeeedde2b6137def75abc2b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-01.svg",
+      "bytes": 60415,
+      "sha256": "7688621629bd1fa5187bd1ed5b3dfdd2240b764de1b9b2bdfd1f3255a92d6fba"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-03.svg",
+      "bytes": 322417,
+      "sha256": "a5a1ff856800584292d8615109b1d956247281621e80767f8b5dd0e48ec6fc84"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-05.svg",
+      "bytes": 209323,
+      "sha256": "9646adbbaefd6b2a93e39cbdfc6bd54e5fcc305289c65224cef70150924052f3"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-06.svg",
+      "bytes": 269291,
+      "sha256": "ef0482da44cd36d11c202b5e5b0f48e380f0d7af1a13003ab4237e2edf9507a0"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-07.svg",
+      "bytes": 266292,
+      "sha256": "2abcf3ceac710a83806e7308235f3ca89c93e8d6ae6d5b85a59944989193c3fc"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-08.svg",
+      "bytes": 299040,
+      "sha256": "6ba01f4c4c7f3c6057669b4465f91b8a5f1b135c49e309186054bdaf893edb19"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-09.svg",
+      "bytes": 300199,
+      "sha256": "a3bfe14fd007ad69938797e3a58aabcb4aa6bc5542bd3193727f24fd3b61e56c"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-10.svg",
+      "bytes": 203313,
+      "sha256": "b61aead2bf15c4743b0314d112b4d8c287afb8ed7ec955f5971e5acd78c79bba"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-12.svg",
+      "bytes": 312572,
+      "sha256": "da882dcb19d1ac541974325afae4002b96351c64acf4e342c32bf4ffa3043ab2"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-13.svg",
+      "bytes": 334060,
+      "sha256": "45f75d3d77d77aca703e48e99f4be9b6d32ce784472cdead849c0357036d891e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-14.svg",
+      "bytes": 316449,
+      "sha256": "2aff67fbb147694ef15aa3cb148db3b11df3100b168d2ce482b2d5461994ee6e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-15.svg",
+      "bytes": 332729,
+      "sha256": "48c5dc804a0072a8a56009335020640fa2b11870bec4cc7063878dafa45bb2f5"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-16.svg",
+      "bytes": 294066,
+      "sha256": "1e9bae0392ef4f47adf1820c72006f73e372325d35105f82c8258fc5b212e1fc"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-17.svg",
+      "bytes": 332534,
+      "sha256": "1c0bfbaf3aa75b54310d102e34d3a37d5c77b0e6bf2b2a841da6ed42935d44e1"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-18.svg",
+      "bytes": 341501,
+      "sha256": "0dc8c90385a19987ec7a56886165e8e5c3189fbe1ae70e36375952b6c3127d7c"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-19.svg",
+      "bytes": 348273,
+      "sha256": "cf7faf3644c4878defabbc08385a84c83417d22b94af83119406613318d6ebbd"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-20.svg",
+      "bytes": 231247,
+      "sha256": "33a3afe864a270249c32b82a7974ac992332b35034cf8526d066e45dcec10139"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-21.svg",
+      "bytes": 292395,
+      "sha256": "eb5dea23d5c646cfcd8bdabba28ab948761970471e6c96ff7b7fdb91ec5857ce"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-22.svg",
+      "bytes": 260209,
+      "sha256": "db01cdc60370204b98984dc223e4d30cbeeb48c459fbc4dc39b515141ccc6224"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-23.svg",
+      "bytes": 290080,
+      "sha256": "25e805a42cb9673be18b2638cf7d4f1259274f823362dcec7075e3730a0eca7f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-24.svg",
+      "bytes": 270377,
+      "sha256": "a09dfea186e42702417cb1b534d410d622e3bbad56f5709682358038c88d7e5f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-25.svg",
+      "bytes": 389193,
+      "sha256": "14a51c971c1500cd8bc2cf6cd5eb717581bd12abc341c3fe393ffa6ab1c1b51e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/AP-26.svg",
+      "bytes": 342521,
+      "sha256": "bc057ef28852792727576d46b1c5fd770981c43d9d33df90896685a8ec3dee80"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/axon-4a359558d965.jpg",
+      "bytes": 842,
+      "sha256": "4a359558d9650030ee15a491c1540d22786e0d33fbfa84ec2e9d8aee9dce3d7b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/axon-4d0cd5b23554.jpg",
+      "bytes": 215799,
+      "sha256": "4d0cd5b23554677e32269ddc7e4ef1a4cffc1f2ebd675e940c61b14824c66406"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/axon-7901be605324.png",
+      "bytes": 8422,
+      "sha256": "7901be605324ff1ae8e564e594003545216e093b5112868b3594243b9f307527"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/axon-86a29dbed073.png",
+      "bytes": 12304,
+      "sha256": "86a29dbed0734f31aa92f242d54c5dfadf7d70d18047ee1731b23ad67ce6eefe"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-007e903ccf10.png",
+      "bytes": 1993,
+      "sha256": "007e903ccf1028550a04c1286a3fbdf5cfbbfb779d2fa5332bb15095e1c0c6a5"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-037a99647cff.png",
+      "bytes": 4204,
+      "sha256": "037a99647cff2c86dd2ecd21760cec972180650691894e0f0ecc4bacf9fa2c8e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-03d1b6f9e7a2.jpg",
+      "bytes": 226906,
+      "sha256": "03d1b6f9e7a243f093464182e00373b472a65d4fbe16828810cc97067c57a1cd"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-046ac698bff0.png",
+      "bytes": 109,
+      "sha256": "046ac698bff0989c440b458fb84a780fcc3b8058e3292644a04bf2141c5b1dd5"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-06d690991629.jpg",
+      "bytes": 3657,
+      "sha256": "06d69099162925e79b1e32b72bb68e31305652ba32eec64cf6b8e3644051344e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-084bf5c44ffd.png",
+      "bytes": 2488,
+      "sha256": "084bf5c44ffddf97e75552a55f961133c9c1e94da345a298b4b8b8c05b670717"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-0a0aa5ca1ffc.jpg",
+      "bytes": 369,
+      "sha256": "0a0aa5ca1ffc2753bf98cb62a77dd6a18b2ae7280dac6d97706352a7a9f04cda"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-0a92fd210238.png",
+      "bytes": 7426,
+      "sha256": "0a92fd210238b168e6311b2bd8c86b2297a0e30f5c68f155e5d592b579a13bb5"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-0ad326aa2a0a.png",
+      "bytes": 511,
+      "sha256": "0ad326aa2a0aa5a64f5652e295d8569648564dd62f0889249212e938a53c9fa2"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-0b5690d60436.png",
+      "bytes": 5919,
+      "sha256": "0b5690d6043661e63b1428bab653f3f9d7a94a8905bdd29610ab51f07ba8641b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-0d4a07c6eb4a.png",
+      "bytes": 3286,
+      "sha256": "0d4a07c6eb4a24807a252886b88774de8bd9eb91a14d0ee2adb3136fdf00e5e7"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-0e0fe247feb2.png",
+      "bytes": 8804,
+      "sha256": "0e0fe247feb204e4d163c3e5814a4ff47e5086d70e70d2fef7d50c893a46a40e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1064cd60662e.png",
+      "bytes": 518,
+      "sha256": "1064cd60662e43f646efd5687e9fd7bacb5381ae8e67193399fe749e62abb51f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-10650b63bf7f.png",
+      "bytes": 1897,
+      "sha256": "10650b63bf7f6289b8982b215582c499659c9be475f645f20da0158e35ed6a99"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-10cf384962cd.png",
+      "bytes": 5421,
+      "sha256": "10cf384962cd623026bf1e0d0e8a6411f3de9d1e74f331349c2cdb75a5717df5"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-12004e4c53e3.jpg",
+      "bytes": 659,
+      "sha256": "12004e4c53e337d6abf02038797a41633affbf8f73943822d63e952660798098"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-13647b060f3c.png",
+      "bytes": 4343,
+      "sha256": "13647b060f3cf96d029e3134b5cc331d04a18d0b7e4b01274ae8bcb44d213ae8"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1394320f083e.png",
+      "bytes": 3192,
+      "sha256": "1394320f083e8177f0106a7340da814d990a6e70bc94b5049bf82f0074d325a6"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-13bb6b5590b3.png",
+      "bytes": 3613,
+      "sha256": "13bb6b5590b305a53213fc76da80e7d6fd56c69ae0584974602d2a7b6cc1a795"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-16eb659dfcb3.jpg",
+      "bytes": 3911,
+      "sha256": "16eb659dfcb3a618ac859dc3cac349aaa80894c9bdea568958bf79a38c88f0c2"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-17277073f823.jpg",
+      "bytes": 440,
+      "sha256": "17277073f823035c4cc1a6e7d0be9590a29ad0dbe930b79fa44b5fe94649f28b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-19189f7b2442.png",
+      "bytes": 523,
+      "sha256": "19189f7b24422fbb3e5de8acc263d358ae79c1fab2439a6307460ac9a564ca2a"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1ab8758f64ca.jpg",
+      "bytes": 359,
+      "sha256": "1ab8758f64ca94bdbc8c98b089fa0034334aae7672e44be88d622d9414164829"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1ae056531912.jpg",
+      "bytes": 474,
+      "sha256": "1ae0565319124def3ae3a7d107955f03eabd1d76a01a73680f282fc5066c1603"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1c79e76576a5.png",
+      "bytes": 3564,
+      "sha256": "1c79e76576a54a4f2c4526945d8f2bb83f06cabe4b98d6f03448035d033916fd"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1dc281beb953.jpg",
+      "bytes": 423358,
+      "sha256": "1dc281beb9531ff83e46e91ba9394cc7ebe135f81cd824f4f7ac31339bdaa95e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1f4e60dd7eda.jpg",
+      "bytes": 1745,
+      "sha256": "1f4e60dd7eda9d7dc468dd6382979d7009f4ce9a6365e58dee951a340ab4931b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1f4f80a5f3d4.jpg",
+      "bytes": 344466,
+      "sha256": "1f4f80a5f3d49b9302b01c18d4e98642cb946bec2825b3e435a7b8f47c23a392"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1f949081f34f.jpg",
+      "bytes": 1802,
+      "sha256": "1f949081f34f4b4f50e5ebe876e50777b33b406c5ea44792fd928f4558505135"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-1fd52b3bcb09.jpg",
+      "bytes": 4881,
+      "sha256": "1fd52b3bcb0996606e8256e703289cd885adca2893eef1bd1492d1572b153ba2"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-278804f99530.png",
+      "bytes": 2528,
+      "sha256": "278804f995305ee5d269e909a20f5fc2ea7862e90374c70e3dcbca32f976915f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-2b3544798e14.jpg",
+      "bytes": 2978,
+      "sha256": "2b3544798e14c58a6ce7579fdb72ef7720fa86bc6368f332d6eb472364a79051"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-2b8ea0ff1bcf.png",
+      "bytes": 3806,
+      "sha256": "2b8ea0ff1bcfc636e863591bc25f4af4c1bb187d24704d99546dc5cb65863167"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-2cbfd7703c3c.jpg",
+      "bytes": 387,
+      "sha256": "2cbfd7703c3c9de1e7646cc9c894d66ef457c65a6f89ff1190d1a9cb58f2d358"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-2f6eb7ad3187.png",
+      "bytes": 2923,
+      "sha256": "2f6eb7ad31874a54975936900220633b59a4e7a8fb0501e608677a8ff8c40392"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-30432075d500.jpg",
+      "bytes": 1193,
+      "sha256": "30432075d5007b54a8f477fe69d9088ae6765da8208363381171b3d6058b286b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-30527a3bc80f.jpg",
+      "bytes": 1445,
+      "sha256": "30527a3bc80f2c9f63ba32e7c9b9e9282351c86cf13200d0541d531542d6cc54"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-399ea74ec8e2.png",
+      "bytes": 7999,
+      "sha256": "399ea74ec8e20f1c1f72e44ef75297de2452cd7d194cb3f546431223f90e2005"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-3a902ac4a726.jpg",
+      "bytes": 528,
+      "sha256": "3a902ac4a726bccf56f5d630f45aff62bc007be5af7d955a6b6f44fd03b8d823"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-3ab6b89e8cd5.jpg",
+      "bytes": 645,
+      "sha256": "3ab6b89e8cd5feeacc7002861cbfd9256db4bf44c47bf917c9bbce0609243be3"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-3c2b042cd23e.jpg",
+      "bytes": 1769,
+      "sha256": "3c2b042cd23eed3915b81ddca1f98a84570b54bb1f8c4559b0eb9b57c639b886"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-3dfd9ca35e98.png",
+      "bytes": 2663,
+      "sha256": "3dfd9ca35e98884f012501429e931f8ad77e6a1f73c74d746e065fbcc553d540"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-401a2fc63d3a.jpg",
+      "bytes": 479,
+      "sha256": "401a2fc63d3afb1ce66f787f753ea55b80f5dd17d6bc9702fc394162b916b7a8"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-40f682e7d341.png",
+      "bytes": 10268,
+      "sha256": "40f682e7d341360cfde0abc52884bcc23b483485371b72f755a9292ddcdb8052"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-41196476d76e.jpg",
+      "bytes": 5872,
+      "sha256": "41196476d76ea66f0d28277be8512a7647ecc8477118784ecb9ef39cbb86f3d7"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-425ec2e53eaa.png",
+      "bytes": 17164,
+      "sha256": "425ec2e53eaa12bf1d3a280185ff8b8d13a24a9215e0aa3221b33d5bc244b747"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-42b6da8c2d1b.png",
+      "bytes": 1729,
+      "sha256": "42b6da8c2d1b0b724e0daee8589aa67115912d28cef03a1d9b0e50b1adf6f9b9"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-4456217768b6.png",
+      "bytes": 3363,
+      "sha256": "4456217768b62e982e651509c8ff1f3d998161c8291840bb64d954927569270a"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-44618f0888ed.jpg",
+      "bytes": 6085,
+      "sha256": "44618f0888ed11c3b9e7c78fdac5bb3e2bebb6f8c2dfa02d908eb91672702c0c"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-449d498da7dd.jpg",
+      "bytes": 5921,
+      "sha256": "449d498da7dd79adfcec9f2c89460bb06710ba53c7d21853e4dbff0aaf2b1234"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-4570548d35e5.jpg",
+      "bytes": 960,
+      "sha256": "4570548d35e53a929904461c88dc86168c230ed4131452f718d48e4d0be5ecc0"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-45943f66efd0.png",
+      "bytes": 3133,
+      "sha256": "45943f66efd05b56f9f99f7881ed000c941e023de14f31a20cb63df9564b68e3"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-4a359558d965.jpg",
+      "bytes": 842,
+      "sha256": "4a359558d9650030ee15a491c1540d22786e0d33fbfa84ec2e9d8aee9dce3d7b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-4a55235aada5.jpg",
+      "bytes": 337,
+      "sha256": "4a55235aada52a5783123f990aff19f6b4ded131934fef477104218afa329c8e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-4c8edd5b9fef.jpg",
+      "bytes": 450,
+      "sha256": "4c8edd5b9fef95b687af5a13f19fac0d3a6cdd01d12c0b75f334efb384ac90fd"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-4cd9256f9934.jpg",
+      "bytes": 686,
+      "sha256": "4cd9256f99342c62ec58bbf1c92a7b433dc358b9b49171735edf5a69d820fbb2"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-4f25968f91e0.png",
+      "bytes": 3343,
+      "sha256": "4f25968f91e0ebe11f24b1fcc294d3c909c7870f33450ecb9327f6f6df1f340e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-5468fe90d8d5.jpg",
+      "bytes": 578,
+      "sha256": "5468fe90d8d571ba9c531cad28dd9fbebda8cea84dac77d30d369ba3858d791a"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-552f1d38ba45.png",
+      "bytes": 581,
+      "sha256": "552f1d38ba45b439926a29b84cd2ac2f45794312e357bb95e85b0665830953c0"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-5a443e3905e9.png",
+      "bytes": 2236,
+      "sha256": "5a443e3905e90da338c17d98b34539308824fa476c9b9693e160228b85ef1a95"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-5ebfadd1c367.jpg",
+      "bytes": 585,
+      "sha256": "5ebfadd1c3677ee041560dd0b854df7dacf01e00a8aecc9175646d41d80dcb73"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-5eeb17efb969.jpg",
+      "bytes": 615,
+      "sha256": "5eeb17efb96955e4e602aead25892eacfb7a397812d2d79494af63364e36f71e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-6242c41d1fa5.png",
+      "bytes": 469,
+      "sha256": "6242c41d1fa517f763642a651106d97f269a7ea2360bdb9353d8bb10c5650f98"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-62cffc0fbcae.jpg",
+      "bytes": 920,
+      "sha256": "62cffc0fbcae8367627d0a65ca57980748acb0dbf8fc66bdcbbf4c95706f9058"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-6317960dfd66.png",
+      "bytes": 1292,
+      "sha256": "6317960dfd664463a6a719f9ef11475d0d21b98536901c1282269c91d22684d7"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-631bc5e82610.png",
+      "bytes": 7465,
+      "sha256": "631bc5e826106d1cfb4ea53eaeffd59a5beb93c094744eb311ee8dcb4b6619bd"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-6385a998dfce.png",
+      "bytes": 3419,
+      "sha256": "6385a998dfce1d38c3a1a669d7be6ae701196d0da73aa6dfd8e42fe351bcb00d"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-66e03520627d.jpg",
+      "bytes": 3941,
+      "sha256": "66e03520627ddee880a7173313ce0cf9cafb1b6a0420461558b509784d3e8f32"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-6718bdcc230f.png",
+      "bytes": 686,
+      "sha256": "6718bdcc230f19c51dffb0b79650922fad6c457b82caf0ae7a1092d53fdda4da"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-704701462e57.png",
+      "bytes": 2544,
+      "sha256": "704701462e573f5021cabbdbe7f88f72f9088d816d71bfe26f6f7fe7e04692d1"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-725dadcd38df.png",
+      "bytes": 108,
+      "sha256": "725dadcd38df3bb7f79a10c3ff3f72c9f3f2b8cbf22ef88334b35e61ef91cbf1"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-73d4e3a08f99.jpg",
+      "bytes": 1065,
+      "sha256": "73d4e3a08f99591d7cb39efa97df3db34c416b84f13ebdb0f46b3b2b3bc9a86a"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-761d17c84d1f.png",
+      "bytes": 4745,
+      "sha256": "761d17c84d1f55b48965200333e053351f5ce9e0b8015137bebf5293d80bfa62"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-761ef581e07d.png",
+      "bytes": 2753,
+      "sha256": "761ef581e07d0b2ad4c7fb66a46c8c90b4f3c23ebf81d511259a688469cd47f6"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-778728653b12.png",
+      "bytes": 8454,
+      "sha256": "778728653b1284f6ce8c3ad6d4622a05354ee9eee8170267435a6bf9f77256e1"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-7901be605324.png",
+      "bytes": 8422,
+      "sha256": "7901be605324ff1ae8e564e594003545216e093b5112868b3594243b9f307527"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-793f412777ab.jpg",
+      "bytes": 7176,
+      "sha256": "793f412777ab9d7f48ef7da13927a5460def543b4ccd369ab9d6c4272513e785"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-79ef6fe06892.jpg",
+      "bytes": 5906,
+      "sha256": "79ef6fe0689210c2297ab2cd3387d68b61e8aea5fbaecde251e1ec77c0139dd9"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-79fa15ca91d8.jpg",
+      "bytes": 4266,
+      "sha256": "79fa15ca91d8572d1afd60d2c2c629b083cd4398d70a440c4dbac5433f4a7326"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-7a169541cb67.jpg",
+      "bytes": 361,
+      "sha256": "7a169541cb671278076480f813a5bbbcaca3055619c947663a4158247f05519a"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-7b5e39458dc0.png",
+      "bytes": 2601,
+      "sha256": "7b5e39458dc0f9996ef2cbd0b0cfcd48d9b71bf4839de0ef6ce434d262e24bef"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-7c54bda74902.jpg",
+      "bytes": 4756,
+      "sha256": "7c54bda749022838cf41553290e74e6b66209fa98e6eb74a19daf37ab0de0e81"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-838aee31a95c.jpg",
+      "bytes": 5745,
+      "sha256": "838aee31a95c82e0c9c3d0f5dc649c88b3a93a6033d5bcac2c4d4293f16cfedd"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-86a29dbed073.png",
+      "bytes": 12304,
+      "sha256": "86a29dbed0734f31aa92f242d54c5dfadf7d70d18047ee1731b23ad67ce6eefe"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-87188522b802.png",
+      "bytes": 9195,
+      "sha256": "87188522b80228058beecff0b7d918274e87f737badd3375f15e10ed7e6920ba"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-883110708b39.png",
+      "bytes": 3506,
+      "sha256": "883110708b390e5aa496614262205c03fae39ddfaf46bde9bd45a5243fa4870a"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-8b9517c210c6.png",
+      "bytes": 3503,
+      "sha256": "8b9517c210c6d1058e7a7dceb6ada1aa8ee556fc06fec5c4da869690f511db75"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-8bb2e755ff34.jpg",
+      "bytes": 6747,
+      "sha256": "8bb2e755ff341da542eecaa6068ab609b917cd8984e1ca0b6774f8f1b65e1b42"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-8ca2c5d92542.jpg",
+      "bytes": 656,
+      "sha256": "8ca2c5d9254282413e42c5ad2c2b2c7da9fda5922819b898d9fb2c48b4131fa5"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-8da567e729df.png",
+      "bytes": 2438,
+      "sha256": "8da567e729df01c9febe9e331cd1f3fcbc4cbc0ec1b9af039d61c66d8b87873f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-8de0bba09bac.jpg",
+      "bytes": 527,
+      "sha256": "8de0bba09bac8df138ef7f824cc9e24118b1d1d6888519c179e6f7d0d1d32d56"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-8eadcc4d412b.png",
+      "bytes": 127,
+      "sha256": "8eadcc4d412b00e7c1c675d37b7d29fa96379fb74cfbf020d1f4e0948037e779"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-8ef49d61a0a5.png",
+      "bytes": 1270,
+      "sha256": "8ef49d61a0a5634ee3871d4f26153338d0e49b670a2593e0eedf95d0975357c8"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-9262cf25d30a.jpg",
+      "bytes": 3567,
+      "sha256": "9262cf25d30a1891f9d6982d84f48b4e1a319c6c455fc125df614a595c1334e6"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-9320d6a969ea.png",
+      "bytes": 493,
+      "sha256": "9320d6a969ea4fd9d6f65d373c4a3cd057c8a634e200b2d07e61d3a89666abf6"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-96ab6ce07822.jpg",
+      "bytes": 5279,
+      "sha256": "96ab6ce078224596a48f396111a228c5c3a7c5d839a278a9019320272d1d10aa"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-97bd8ef7e961.png",
+      "bytes": 9033,
+      "sha256": "97bd8ef7e9612af32d2d6300c422a91717feb2c04dee9787ac33066e14d6a241"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-a1d9aaf70bba.png",
+      "bytes": 2071,
+      "sha256": "a1d9aaf70bba71571dbce382861a7384b3afa1b04cb654f07c4ca45b5dc3df5f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-a2b9fa214962.png",
+      "bytes": 6992,
+      "sha256": "a2b9fa214962e9aafd7777f93a822b8152750e8e004a14021b060343f8d4977f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-a46cdf94dae4.png",
+      "bytes": 113,
+      "sha256": "a46cdf94dae4e948b4ce3a744e9c255fdac148dd7ee733ad259b98880799ca07"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-a763fe90c011.png",
+      "bytes": 739,
+      "sha256": "a763fe90c011b5f384ab378786433a746081314a0c0ad7c70482e5af7a67b8df"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-a853addb4b4c.png",
+      "bytes": 4838,
+      "sha256": "a853addb4b4c97e7cd0f63718d622433d88580bd8bf9280a9fc74ef764b7fa80"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-ab258bb78dcc.png",
+      "bytes": 1241,
+      "sha256": "ab258bb78dcc8d87b38f12f532aa2c08f289572dca24d4a3700921ad510f1bdd"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-acbc66d4eeb4.jpg",
+      "bytes": 615,
+      "sha256": "acbc66d4eeb4901f34092c02f96fb31bb96a251b35b5f2c6f03912ca8ee56a95"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-adf5972c67b9.jpg",
+      "bytes": 821,
+      "sha256": "adf5972c67b9ae75237ab0b6f675d87d7d7f2836b029a914ef357056103b668f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-afb7f4acf435.png",
+      "bytes": 4718,
+      "sha256": "afb7f4acf4359f80fca5fa3c791a4f4af9226a4738a941de4c915e53e15e7be2"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-b16de3c70afa.png",
+      "bytes": 2279,
+      "sha256": "b16de3c70afa2f90f52a3fb5d973b7bb9366692bcc01f672a8eb0e5276cee05e"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-b1bd3ce38b32.jpg",
+      "bytes": 1797,
+      "sha256": "b1bd3ce38b321cb7e0f85fa5d3bfacec9771c7dd24bfaf7eab86f61039447cd7"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-b259c7d20cec.png",
+      "bytes": 132,
+      "sha256": "b259c7d20cecce026ad18169fad2302cc9725d294c8f2fde28cd45b06ba415e9"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-b9cbd79beecc.png",
+      "bytes": 810,
+      "sha256": "b9cbd79beecc4c8ebb6d481854789f50a980318253c5f1c0f6479effcf418796"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-bd87f25018f9.jpg",
+      "bytes": 6507,
+      "sha256": "bd87f25018f93b84326aedbeefa724d6bcd62f93a6bca7d3b662e88ba3119b67"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-bf186b71f977.jpg",
+      "bytes": 5341,
+      "sha256": "bf186b71f977af85387357707fc38abb0dd8ae4c0c12716124efec41f425fcb4"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-c243b1835228.jpg",
+      "bytes": 2808,
+      "sha256": "c243b1835228aa82cc1853df1e3e92a3cd9225a4f3f0177b83efc46d5921719b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-c5ebc8455077.png",
+      "bytes": 3188,
+      "sha256": "c5ebc8455077b2699185c08e798741e4451b10c8e04db95980432a5a41858c13"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-c5ef2086fec9.png",
+      "bytes": 2352,
+      "sha256": "c5ef2086fec9c0914300ac4e06c1919047101854ca001723023a1f945f74918a"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-c7db6391f8a8.png",
+      "bytes": 3046,
+      "sha256": "c7db6391f8a88daddca7c4cbfa78b6358302519f192d07bfa25be74f90753cfe"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-c821812f1f41.png",
+      "bytes": 2192,
+      "sha256": "c821812f1f4148495e731c26c8db108dc11d784cbaf0907d7c5ff3a28a64cd11"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-c845526c29f2.png",
+      "bytes": 1409,
+      "sha256": "c845526c29f2be3bf01024367e7d1e4106b6d92bdc892d66ba91da22589280d9"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-c950ca6e61ce.png",
+      "bytes": 2246,
+      "sha256": "c950ca6e61ce83b64858bae7e68c7c2c5cf048b62472993b3be4df913a814f19"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-caa78a706b84.png",
+      "bytes": 1474,
+      "sha256": "caa78a706b84ce395252fc7d57087517a434c6f0afc21bf2ba234334feef88a3"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-ccbdf4ec4240.png",
+      "bytes": 1649,
+      "sha256": "ccbdf4ec42405a853a9f6e8511221da39c830097478b9a64784227ccd7642f48"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-cf67a9bb7c9d.jpg",
+      "bytes": 498,
+      "sha256": "cf67a9bb7c9d8ee48ed6e8a34a6c3f059c4a9648fe29437826362169b83c403b"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-d24f43c442a1.png",
+      "bytes": 4684,
+      "sha256": "d24f43c442a17e4bf8b7d197af9fee6cbfc73541c62668b405208dfe810ad292"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-d53adebf51b8.jpg",
+      "bytes": 2206,
+      "sha256": "d53adebf51b8aea1e19d0e96802745932e8ce90565a2cc4752f483964056d393"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-d674c6eb8c44.jpg",
+      "bytes": 1229,
+      "sha256": "d674c6eb8c44958346216057c79b1f9ae9e1b1299ce42b79aec4209eee7efd21"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-d86e3f2877b4.jpg",
+      "bytes": 1170,
+      "sha256": "d86e3f2877b403b74cc77ec945a9247dc769fef1d4fd594e7f32bb5fcb007067"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-dd391fa4f77e.png",
+      "bytes": 552,
+      "sha256": "dd391fa4f77ebe6d5f4c376c1bc61401e19e6db7a1395df88250b3557b09d4ce"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-dece38bc08e8.jpg",
+      "bytes": 1784,
+      "sha256": "dece38bc08e88fc029b5c06121843421e5f125a495bab5cffb6ffe078c02bf76"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-dfd123531f84.jpg",
+      "bytes": 6000,
+      "sha256": "dfd123531f847f06502ae52fa2e53785f92a5cab41b4a1d6b2642ed8f991d54d"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-e0cf7dc36b11.jpg",
+      "bytes": 4028,
+      "sha256": "e0cf7dc36b115d95e9cd690979707c7a9351a74b846d39c20f9186d6921d92e3"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-e4c20d25b0db.jpg",
+      "bytes": 630,
+      "sha256": "e4c20d25b0dbc2fdb82ac9d8358d47b7e83b3b941dbd809064c271703e9a44f7"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-e72addf088c3.jpg",
+      "bytes": 2127,
+      "sha256": "e72addf088c3aabc2aff3b7a58a618e345da1ae8d6f5fe1d7fe370885d46d175"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-ebee82ea7400.png",
+      "bytes": 4312,
+      "sha256": "ebee82ea7400e8d37ebd069a5c63dbf0d0784bb1ab928d7b1f36769c79963504"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-ed5cc745d191.png",
+      "bytes": 1995,
+      "sha256": "ed5cc745d1918167121460117e43f939b0f402619321c9c7ecf8204316f455c1"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-ee162a7ff3d4.jpg",
+      "bytes": 1170,
+      "sha256": "ee162a7ff3d4d7e877becdbe6e0c2fee60fb9744ea3684050c91e69d97ee7898"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-eebe965b1716.png",
+      "bytes": 623,
+      "sha256": "eebe965b1716a22e95b7b30041fe7ec36b206f178826e4de4da30eded9fc2405"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-ef029acc89ac.jpg",
+      "bytes": 929,
+      "sha256": "ef029acc89acfd0c431e97788989bbf6161c1233a23aecdb17702670a0418533"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-efdaf8e88706.png",
+      "bytes": 132,
+      "sha256": "efdaf8e8870624e712b2b4fe0dc523009cded642d0474745e915061d0b25f006"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-f062d72e4ba0.png",
+      "bytes": 4299,
+      "sha256": "f062d72e4ba0439920326681222f655b033e54a17bde2619a1d74303563f798f"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-f279fe6d27e3.jpg",
+      "bytes": 477,
+      "sha256": "f279fe6d27e39aa0bab775963b4979a5316854a6a89929dc3b2b78368417f3a0"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-f2813a5da8e1.png",
+      "bytes": 122,
+      "sha256": "f2813a5da8e1c87412d2c43ae68b69f28895c1fc626531c2a10b9e88f646d6f9"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-f52ae4f605f0.png",
+      "bytes": 5910,
+      "sha256": "f52ae4f605f0d75014c852ee278f165e1b3f603d6ef0c67e235bcb2da24d6208"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-fb2d5f8dff85.jpg",
+      "bytes": 3154,
+      "sha256": "fb2d5f8dff85e9871082babffa6a878e6b2f5a0d2ca9c88818efc2b28684baa0"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-fe3bb25cd2ee.png",
+      "bytes": 7068,
+      "sha256": "fe3bb25cd2ee61acbc3189087299df326874ed50fb7707dc8989a8e54dc3ffa7"
+    },
+    {
+      "path": "drawings/chatgpt/architecture_pptx/svg/media/image-fe405337a284.jpg",
+      "bytes": 423127,
+      "sha256": "fe405337a284b9bf826996c901c079d73079f0ca1dd8164fbb5b179b8c49ea3c"
+    }
+  ],
+  "backup_bundle": "/workspace/born_fragrance-stage-backup-2026-10-06.bundle",
+  "closure_status": "Owner authorised merging into main before branch closure",
+  "archives": [
+    {
+      "tag": "archive/born-fragrance/2026-10-06/chatgpt/architecture-pptx",
+      "commit": "771782a7f75645151792653477e25a38223a383a"
+    },
+    {
+      "tag": "archive/born-fragrance/2026-10-06/chatgpt/portrait-presentation",
+      "commit": "d21be2455ec9b77c3066f6efb025077c888e6064"
+    },
+    {
+      "tag": "archive/born-fragrance/2026-10-06/chatgpt/tbc-answers",
+      "commit": "8a0a590585029b91ef7aba50c6451aa82922c1bc"
+    },
+    {
+      "tag": "archive/born-fragrance/2026-10-06/claude/great-goldberg-anh45q",
+      "commit": "fee3c8ed2aeed61eceab97275f4bacb1f5bb2a82"
+    },
+    {
+      "tag": "archive/born-fragrance/2026-10-06/local-work",
+      "commit": "4692eab85cc7ee3520282f4cf43fc8c0b868e135"
+    }
+  ]
+}
