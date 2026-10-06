@@ -1067,7 +1067,7 @@
     }
   ],
   "backup_bundle": "/workspace/born_fragrance-stage-backup-2026-10-06.bundle",
-  "closure_status": "Owner authorised merging into main before branch closure",
+  "closure_status": "Completed: project pull requests merged into main; completed working branches deleted; original heads archived",
   "archives": [
     {
       "tag": "archive/born-fragrance/2026-10-06/chatgpt/architecture-pptx",
@@ -1089,5 +1089,22 @@
       "tag": "archive/born-fragrance/2026-10-06/local-work",
       "commit": "4692eab85cc7ee3520282f4cf43fc8c0b868e135"
     }
-  ]
+  ],
+  "verified_at": "2026-10-06T22:32:08.739194+03:00",
+  "integration_commit": "847165ccd6cfaf0ee660a55779b7097c92c006b3",
+  "merged_pull_requests": [
+    {
+      "number": 5,
+      "merge_commit": "6b609ffdc5adf83a730265971bc86bde24d3b4e0"
+    },
+    {
+      "number": 7,
+      "merge_commit": "cdc4ccaf7bcbdd3b199536b55171916e5d50e025"
+    },
+    {
+      "number": 6,
+      "merge_commit": "847165ccd6cfaf0ee660a55779b7097c92c006b3"
+    }
+  ],
+  "stage_tag": "stage-closed/born-fragrance-presentation-2026-10-06"
 }
