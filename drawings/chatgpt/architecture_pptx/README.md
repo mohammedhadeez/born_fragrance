@@ -8,9 +8,27 @@ The three books named in the handoff were not attached or available in the repos
 
 New detail decisions remain in clouds under TBC #16/#26. Surveyed dimensions are not available. Confirmed design dimensions, site assumptions and unapproved fabrication decisions are distinguished throughout. Existing spec and Claude files are unchanged.
 
-Build the current revision with `python3 drawings/chatgpt/architecture_pptx/revise.py` (python-pptx, cairosvg, Pillow, matplotlib, numpy). Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. The original `build.py` reproduces Rev B only.
+Build the current revision with `python3 drawings/chatgpt/architecture_pptx/review_e.py` (python-pptx, cairosvg, Pillow, matplotlib, numpy). Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. The original `build.py` reproduces Rev B; `revise.py` reproduces Rev D.
 
-## Current owner review — revision D
+## Current review — revision E
+
+Open `BORN_FRAGRANCE_Review_E.pdf` or the editable `BORN_FRAGRANCE_Review_E.pptx`. All nine active slides now omit the three footer fields, narrative sidebars and cloud graphics selected by the owner. The header remains. New drawing interfaces occupy the former sidebar area: rear/side corner, pivot edge, unit head/ceiling, folded tray/LED, recessed plinth, halo stand-off and counter footprint. The axonometric has thin trays, depth-tested edges, a consistent 600 cut, exploded ceiling tracks with projection guides, and native editable leaders anchored to model coordinates.
+
+See `LOD_REVIEW_E.md` for component reliability, open questions, internet references and stable sheet IDs/scales. Footer/cloud removal is an explicit owner presentation override; it does not close TBC decisions. The approved geometry remains; counter panel split and fabrication/MEP connections remain unresolved. The 15 paused sheets AP-12–26 retain their original content and original footer/cloud graphics in the full archive deck.
+
+Rebuild in the cloud:
+
+```sh
+cd /workspace/born_fragrance
+python3 -m pip install --target /tmp/bf-ppt-libs cairosvg==2.9.1
+MPLCONFIGDIR=/tmp/bf-mpl XDG_CACHE_HOME=/tmp/bf-font-cache PYTHONPATH=/tmp/bf-ppt-libs python3 drawings/chatgpt/architecture_pptx/review_e.py
+XDG_CACHE_HOME=/tmp/bf-font-cache soffice -env:UserInstallation=file:///tmp/bf-lo-profile --headless --convert-to pdf --outdir drawings/chatgpt/architecture_pptx drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Architecture.pptx
+python3 drawings/chatgpt/architecture_pptx/audit.py
+```
+
+Review_C and Review_D are historical snapshots. Main orthographic drawings remain 1:20 at A3 landscape; enlarged interface scales are printed beside each view. The cutaway and reference render are NTS. SVGs use adjacent media assets; PPTX and PDF embed images.
+
+## Previous owner review — revision D
 
 Open `BORN_FRAGRANCE_Review_D.pdf` or the editable `BORN_FRAGRANCE_Review_D.pptx`. Nine active sheets: AP-01, AP-03, AP-05–11. AP-04 floor-finish sheet is removed at the owner's request; AP-02 was removed previously. The full Architecture files contain 24 sheets, retaining paused AP-12–26 unchanged.
 

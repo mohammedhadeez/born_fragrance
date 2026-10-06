@@ -26,6 +26,9 @@ Spec SHA-256: `58469767d64fed65cb53908ddbf3c5408fb7b5cdafefebd68b173381b6522c2b`
 | AP-20 | counter-front | 1000.00 × 900.00 | 1000 × 900 | PASS |
 | AP-20 | mesh-insert | 300.00 × 450.00 | 300 × 450 | PASS |
 | AP-20 | counter-section | 450.00 × 900.00 | 450 × 900 | PASS |
+| AP-05 | active-tray | 250.00 × 3.00 | 250 × 3 | PASS |
+| AP-05 | active-support | 20.00 × 20.00 | 20 × 20 | PASS |
+| AP-07 | active-counter-detail | 1000.00 × 450.00 | 1000 × 450 | PASS |
 
 ## Dimensional chains
 
@@ -52,5 +55,7 @@ Spec SHA-256: `58469767d64fed65cb53908ddbf3c5408fb7b5cdafefebd68b173381b6522c2b`
 - PowerPoint and PDF were checked programmatically; rendered sheet contact proofs were reviewed for presentation issues.
 - Revision D removes AP-02 and AP-04. AP-12–26 remain frozen; their original register is historical. Indicative bottles are an explicit owner exception to the loose-products exclusion.
 - LOD 350 is a development target, not a certified achieved model status. Survey and unapproved connection details remain open.
-- Paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The nine-page Review_D PPTX/PDF omits all paused sheets.
+- Paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The nine-page Review_E PPTX/PDF omits all paused sheets.
 - Rev D removes AP-04 as requested; the active Review_D is nine pages. AP-12–26 still compare pixel-identical to the original. Counter left-mesh front is an owner-directed visual revision; split and construction thicknesses remain TBC #16. The paused counter details retain the old insert and are not current design authority.
+- Review E removes selected footer texts, narrative sidebars and clouds from all nine active slides. The owner explicitly overrides their previous presentation requirements. Sheet IDs/scales/status stay in the manifest and README; connection-specific TBC notes remain beside relevant interfaces. The paused archive is unchanged.
+- Review E adds 1:5 rear/side corner and plinth sections, 1:2 pivot and folded-tray/light interfaces, a 1:10 counter footprint and a newly rendered orthographic cutaway with native editable leaders. See LOD_REVIEW_E.md for component reliability and references.

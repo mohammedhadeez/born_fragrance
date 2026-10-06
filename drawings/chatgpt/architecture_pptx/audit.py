@@ -34,7 +34,7 @@ math_checks={'frontage':450+1500+450==2400,'glazing':4+488+4+1000+4==1500,
 assert all(math_checks.values())
 pdf=fitz.open(OUT/'BORN_FRAGRANCE_Architecture.pdf')
 assert len(pdf)==len(order)
-if manifest.get('revision') in ('C','D'):
+if manifest.get('revision') in ('C','D','E'):
     import subprocess
     baseline=fitz.open(stream=subprocess.check_output(['git','show','83d60a940ffe9859af6a13fc94b04012bdb9da98:drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Architecture.pdf'],cwd=OUT.parents[2]),filetype='pdf')
     for old_i in range(11,26):
@@ -49,9 +49,17 @@ previews=[]
 for i,page in enumerate(pdf):
     assert abs(page.rect.width*25.4/72-420)<.1
     assert abs(page.rect.height*25.4/72-297)<.1
-    assert f'AP-{order[i]:02}' in page.get_text(),i+1
+    if manifest.get('revision')=='E' and i<9:
+        assert manifest['slide_titles'][i] in page.get_text(),i+1
+        for sh in p.slides[i].shapes:
+            if sh.has_text_frame:
+                assert not any(t in sh.text for t in ('FOR COORDINATION','SPEC SNAPSHOT','SOURCE REV A','REV D')),sh.text
+                assert not re.fullmatch(r'AP-\d{2}',sh.text.strip()),sh.text
+            if sh.shape_type==5:
+                assert str(sh.line.color.rgb)!='A44338','Cloud remains in active review'
+    else:assert f'AP-{order[i]:02}' in page.get_text(),i+1
     target=OUT/'svg'/f'AP-{order[i]:02}.svg'
-    if manifest.get('revision') in ('C','D') and order[i]>=12:
+    if manifest.get('revision') in ('C','D','E') and order[i]>=12:
         target.write_bytes(subprocess.check_output(['git','show',f'83d60a940ffe9859af6a13fc94b04012bdb9da98:drawings/chatgpt/architecture_pptx/svg/AP-{order[i]:02}.svg'],cwd=OUT.parents[2]))
     else:
         svg=page.get_svg_image()
@@ -74,6 +82,16 @@ for block in range(5):
     w,h=images[0].size;board=Image.new('RGB',(w*2,h*3),'#d8d8d8')
     for k,im in enumerate(images):board.paste(im,((k%2)*w,(k//2)*h))
     board.save(f'/tmp/bf-contact-{block+1}.png')
+# Drop only untracked export intermediates generated under this tool's media dir.
+# Referenced assets and previously committed assets are always retained.
+import subprocess
+used=set()
+for svg_path in (OUT/'svg').glob('*.svg'):
+    used.update(re.findall(r'media/([^" ]+)',svg_path.read_text()))
+untracked=subprocess.check_output(['git','ls-files','--others','--exclude-standard','drawings/chatgpt/architecture_pptx/svg/media'],cwd=OUT.parents[2],text=True).splitlines()
+for rel in untracked:
+    path=OUT.parents[2]/rel
+    if path.parent==OUT/'svg'/'media' and path.name.startswith('image-') and path.name not in used:path.unlink()
 md=['# Read-back audit','',f"Source repository snapshot: `{manifest['source_commit']}`.",
     f"Spec SHA-256: `{manifest['spec_sha256']}`.",'',
     f'{len(order)} PPTX slides reopened successfully. LibreOffice exported every page to PDF. All pages have A3 landscape MediaBoxes and stable AP sheet numbers. All native shape extents remain on the slide. Embedded images are self-contained.',
@@ -92,8 +110,10 @@ md=['# Read-back audit','',f"Source repository snapshot: `{manifest['source_comm
     '- PowerPoint and PDF were checked programmatically; rendered sheet contact proofs were reviewed for presentation issues.',
     '- Revision D removes AP-02 and AP-04. AP-12–26 remain frozen; their original register is historical. Indicative bottles are an explicit owner exception to the loose-products exclusion.',
     '- LOD 350 is a development target, not a certified achieved model status. Survey and unapproved connection details remain open.',
-    '- Paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The nine-page Review_D PPTX/PDF omits all paused sheets.',
+    f"- Paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The nine-page Review_{manifest['revision']} PPTX/PDF omits all paused sheets.",
     '- Rev D removes AP-04 as requested; the active Review_D is nine pages. AP-12–26 still compare pixel-identical to the original. Counter left-mesh front is an owner-directed visual revision; split and construction thicknesses remain TBC #16. The paused counter details retain the old insert and are not current design authority.',
+    '- Review E removes selected footer texts, narrative sidebars and clouds from all nine active slides. The owner explicitly overrides their previous presentation requirements. Sheet IDs/scales/status stay in the manifest and README; connection-specific TBC notes remain beside relevant interfaces. The paused archive is unchanged.',
+    '- Review E adds 1:5 rear/side corner and plinth sections, 1:2 pivot and folded-tray/light interfaces, a 1:10 counter footprint and a newly rendered orthographic cutaway with native editable leaders. See LOD_REVIEW_E.md for component reliability and references.',
     '']
 (OUT/'AUDIT.md').write_text('\n'.join(md))
 print(f'PASS: {len(p.slides)} slides, {len(rows)} native geometry read-backs, 9 dimensional chains, PDF pages and extents.')

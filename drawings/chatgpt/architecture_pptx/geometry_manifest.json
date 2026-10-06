@@ -120,6 +120,27 @@
       "w": 450,
       "h": 900,
       "scale": 10
+    },
+    {
+      "slide": 3,
+      "shape": "GEOM:active-tray",
+      "w": 250,
+      "h": 3,
+      "scale": 2
+    },
+    {
+      "slide": 3,
+      "shape": "GEOM:active-support",
+      "w": 20,
+      "h": 20,
+      "scale": 2
+    },
+    {
+      "slide": 5,
+      "shape": "GEOM:active-counter-detail",
+      "w": 1000,
+      "h": 450,
+      "scale": 10
     }
   ],
   "sheets": [
@@ -254,7 +275,7 @@
       "NTS"
     ]
   ],
-  "revision": "D",
+  "revision": "E",
   "removed_sheet": "AP-02, AP-04",
   "frozen_sheets": "AP-12 to AP-26",
   "sheet_order": [
@@ -282,5 +303,32 @@
     24,
     25,
     26
+  ],
+  "review_source_commit": "8d176ad8f12c98729205d55a98d00aba001f485b",
+  "slide_titles": [
+    "Retail interior / coordinated design",
+    "Overall plan / setting-out",
+    "Ceiling / lighting coordination",
+    "Storefront / external elevation",
+    "Rear focal wall / internal elevation",
+    "Left display / internal elevation",
+    "Right display / internal elevation",
+    "Spatial assembly / cutaway axonometric",
+    "Material palette / visible finishes",
+    "Display module / fabrication logic",
+    "Shelf / frame / concealed LED",
+    "Mesh / lighting / service access",
+    "Storefront head / structural interface",
+    "Glazed entrance / jamb and pivot",
+    "Flush threshold / floor interface",
+    "Halo-lit sign / demountable backing",
+    "Rear wall / display-to-wall connection",
+    "Counter / plan, elevation and section",
+    "Counter / services and removable access",
+    "Finish junctions / controlled terminations",
+    "Technical specification / coordinated schedule",
+    "Installation / quality and maintenance sequence",
+    "Open decisions / consultant coordination",
+    "Drawing register / dimensional close-out"
   ]
 }
