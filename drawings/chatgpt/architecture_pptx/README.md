@@ -8,9 +8,15 @@ The three books named in the handoff were not attached or available in the repos
 
 Active review sheets use concise connection-specific TBC notes; the owner requested removing their clouds. The paused archive retains its historical clouds. Surveyed dimensions are not available. Existing spec and Claude files are unchanged.
 
-Build the current revision with `python3 drawings/chatgpt/architecture_pptx/review_h.py` (python-pptx). It loads pinned committed revision G. Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. Older generators reproduce their corresponding historical revisions.
+Build the current revision with `PYTHONPATH=/tmp/bf-ppt-libs python3 drawings/chatgpt/architecture_pptx/review_i.py` (python-pptx, numpy, CairoSVG). It loads pinned committed revision H. Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. Older generators reproduce their corresponding historical revisions.
 
-## Final owner presentation edit — revision H
+## Current owner review — revision I
+
+Use `BORN_FRAGRANCE_Review_I.pdf` and the editable `BORN_FRAGRANCE_Review_I.pptx`. Storefront and rear elevations now include the full vertical dimension chain: 100 plinth + 500 cabinet + five 400 display pitches = 2600, plus the storefront's 600 fascia = 3200. The approved 2580 door-leaf height is also stated beside the glass. Annotation leaders are rerouted to keep dimension figures clear.
+
+The marked plan, storefront, rear and side elevations have faint native drop shadows on selected drawing elements (8% opacity, about 0.5 mm offset). The axonometric has four faint floor-contact shadows (6.5% opacity), projected using its existing model anchors. These presentation effects do not change dimensioned geometry or imply surveyed depths. The dimensions, 27 annotations, page extents and unchanged paused archive are verified in `AUDIT.md`.
+
+## Previous owner presentation edit — revision H
 
 Use `BORN_FRAGRANCE_Review_H.pdf` and the editable `BORN_FRAGRANCE_Review_H.pptx`. All eight active pages omit the top brand/discipline banner and use uppercase titles. The storefront entrance glazing has a translucent pale-blue tint; the door leaf is slightly stronger than the fixed panel. Interior linework remains visible. The G annotations, drawing dimensions, five-view cover gallery and paused archive are retained. H is the final requested presentation edit; existing technical TBCs remain documented.
 

@@ -26,7 +26,7 @@ for i,s in enumerate(p.slides,1):
         if min(sh.left,sh.top)<-36000 or sh.left+sh.width>p.slide_width+36000 or sh.top+sh.height>p.slide_height+36000:
             outside.append((i,sh.name))
 assert not outside,outside
-if manifest.get('revision') in ('F','G','H'):
+if manifest.get('revision') in ('F','G','H','I'):
     views=[sh for sh in p.slides[0].shapes if sh.name.startswith('VIEW:')]
     assert len(views)==5,'Cover gallery must contain five editable views'
     for sh in views:
@@ -41,13 +41,22 @@ math_checks={'frontage':450+1500+450==2400,'glazing':4+488+4+1000+4==1500,
 assert all(math_checks.values())
 pdf=fitz.open(OUT/'BORN_FRAGRANCE_Architecture.pdf')
 assert len(pdf)==len(order)
+if manifest.get('revision')=='I':
+    for chain in manifest['height_chains']:
+        increments=[b-a for a,b in zip(chain['levels_mm'],chain['levels_mm'][1:])]
+        slide=p.slides[chain['slide']-1]
+        figures=[sh.text for sh in slide.shapes if sh.name.startswith('HEIGHT-CHAIN:') and sh.has_text_frame]
+        assert figures==[str(n) for n in increments], (chain,figures)
+        assert sum(increments)==chain['total_mm']
+        page_text=pdf[chain['slide']-1].get_text()
+        assert all(str(n) in page_text for n in increments)
 annotation_count=0
-if manifest.get('revision')=='H':
+if manifest.get('revision') in ('H','I'):
     for i,slide in enumerate(list(p.slides)[:8]):
         assert manifest['slide_titles'][i].isupper()
         assert not any(sh.has_text_frame and 'ARCHITECTURE + INTERIOR DESIGN' in sh.text for sh in slide.shapes)
         assert manifest['slide_titles'][i] in pdf[i].get_text()
-if manifest.get('revision') in ('G','H'):
+if manifest.get('revision') in ('G','H','I'):
     def segment_hits_rect(a,b,r):
         lo,hi=0.,1.;dx,dy=b[0]-a[0],b[1]-a[1]
         for direction,distance in [(-dx,a[0]-r[0]),(dx,r[2]-a[0]),(-dy,a[1]-r[1]),(dy,r[3]-a[1])]:
@@ -74,7 +83,7 @@ if manifest.get('revision') in ('G','H'):
             u,v,ow,oh=other['box_mm']
             assert not (x<u+ow and u<x+w and y<v+oh and v<y+h), (annotation['title'],other['title'])
         annotation_count+=1
-if manifest.get('revision') in ('C','D','E','F','G','H'):
+if manifest.get('revision') in ('C','D','E','F','G','H','I'):
     import subprocess
     baseline=fitz.open(stream=subprocess.check_output(['git','show','83d60a940ffe9859af6a13fc94b04012bdb9da98:drawings/chatgpt/architecture_pptx/BORN_FRAGRANCE_Architecture.pdf'],cwd=OUT.parents[2]),filetype='pdf')
     for old_i in range(11,26):
@@ -94,17 +103,17 @@ previews=[]
 for i,page in enumerate(pdf):
     assert abs(page.rect.width*25.4/72-420)<.1
     assert abs(page.rect.height*25.4/72-297)<.1
-    if manifest.get('revision') in ('E','F','G','H') and i<order.index(12):
+    if manifest.get('revision') in ('E','F','G','H','I') and i<order.index(12):
         assert manifest['slide_titles'][i] in page.get_text(),i+1
         for sh in p.slides[i].shapes:
             if sh.has_text_frame:
                 assert not any(t in sh.text for t in ('FOR COORDINATION','SPEC SNAPSHOT','SOURCE REV A','REV D')),sh.text
                 assert not re.fullmatch(r'AP-\d{2}',sh.text.strip()),sh.text
-            if sh.shape_type==5:
+            if sh.shape_type==5 and sh.line.color.type is not None:
                 assert str(sh.line.color.rgb)!='A44338','Cloud remains in active review'
     else:assert f'AP-{order[i]:02}' in page.get_text(),i+1
     target=OUT/'svg'/f'AP-{order[i]:02}.svg'
-    if manifest.get('revision') in ('C','D','E','F','G','H') and order[i]>=12:
+    if manifest.get('revision') in ('C','D','E','F','G','H','I') and order[i]>=12:
         target.write_bytes(subprocess.check_output(['git','show',f'83d60a940ffe9859af6a13fc94b04012bdb9da98:drawings/chatgpt/architecture_pptx/svg/AP-{order[i]:02}.svg'],cwd=OUT.parents[2]))
     else:
         svg=page.get_svg_image()
@@ -163,6 +172,7 @@ md=['# Read-back audit','',f"Source repository snapshot: `{manifest['source_comm
     '- Review F cover is a native five-picture layout: storefront hero, interior view and three aligned details. Crop/frame aspect ratios are read back and checked to prevent stretching.',
     f'- Review G annotation audit: {annotation_count} direct callouts; no new annotation boxes overlap and no leader intersects exported PDF text ink. Seven technical sheets visually inspected. Named measured geometry and paused slide XML preserved against F.',
     '- Review H removes the top brand/discipline banner on all eight active pages, sets their titles in uppercase and adds translucent pale-blue entrance glass with a stronger door tint. Geometry and paused archive are unchanged.',
+    '- Review I adds full approved height chains on AP-06 (100 + 500 + 5 × 400 + 600 = 3200) and AP-07 (100 + 500 + 5 × 400 = 2600), with dimensions checked against native figures and PDF text. Selected main-view elements have restrained 8% native drop shadows; the axon has four 6.5% floor-contact shadow graphics. These are display effects, not inferred construction geometry.',
     '']
 (OUT/'AUDIT.md').write_text('\n'.join(md))
 print(f'PASS: {len(p.slides)} slides, {len(rows)} native geometry read-backs, 9 dimensional chains, PDF pages and extents.')

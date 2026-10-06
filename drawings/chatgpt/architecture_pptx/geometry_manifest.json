@@ -275,7 +275,7 @@
       "NTS"
     ]
   ],
-  "revision": "H",
+  "revision": "I",
   "removed_sheet": "AP-02, AP-04, AP-11",
   "frozen_sheets": "AP-12 to AP-26",
   "sheet_order": [
@@ -303,7 +303,7 @@
     25,
     26
   ],
-  "review_source_commit": "819460d0edd736c5ae06cb40f8123aa14954cbbc",
+  "review_source_commit": "cb669753b7202261c2c032d5b61f229ed36686a9",
   "slide_titles": [
     "RETAIL INTERIOR / COORDINATED DESIGN",
     "OVERALL PLAN / SETTING-OUT",
@@ -584,22 +584,22 @@
       "title": "BLACK STEEL FRAME",
       "box_mm": [
         211,
-        117,
+        111,
         76,
         27
       ],
       "leader_mm": [
         [
           184.375,
-          117.0
+          112.0
         ],
         [
           202,
-          119
+          113
         ],
         [
           208,
-          119
+          113
         ]
       ]
     },
@@ -608,7 +608,7 @@
       "title": "FOLDED DISPLAY TRAY",
       "box_mm": [
         211,
-        156,
+        152,
         76,
         27
       ],
@@ -619,11 +619,11 @@
         ],
         [
           202,
-          158
+          154
         ],
         [
           208,
-          158
+          154
         ]
       ]
     },
@@ -632,7 +632,7 @@
       "title": "CLEAR TOUGHENED GLASS",
       "box_mm": [
         211,
-        199,
+        190,
         76,
         27
       ],
@@ -643,11 +643,11 @@
         ],
         [
           202,
-          201
+          192
         ],
         [
           208,
-          201
+          192
         ]
       ]
     },
@@ -656,7 +656,7 @@
       "title": "UNLIT BLACK LOGO",
       "box_mm": [
         211,
-        102,
+        111,
         68,
         27
       ],
@@ -667,11 +667,11 @@
         ],
         [
           202,
-          104
+          113
         ],
         [
           208,
-          104
+          113
         ]
       ]
     },
@@ -704,7 +704,7 @@
       "title": "COUNTER FRONT",
       "box_mm": [
         211,
-        181,
+        178,
         68,
         27
       ],
@@ -715,11 +715,11 @@
         ],
         [
           202,
-          183
+          180
         ],
         [
           208,
-          183
+          180
         ]
       ]
     },
@@ -1059,5 +1059,44 @@
         ]
       ]
     }
-  ]
+  ],
+  "height_chains": [
+    {
+      "slide": 4,
+      "levels_mm": [
+        0,
+        100,
+        600,
+        1000,
+        1400,
+        1800,
+        2200,
+        2600,
+        3200
+      ],
+      "total_mm": 3200
+    },
+    {
+      "slide": 5,
+      "levels_mm": [
+        0,
+        100,
+        600,
+        1000,
+        1400,
+        1800,
+        2200,
+        2600
+      ],
+      "total_mm": 2600
+    }
+  ],
+  "depth_shadows": {
+    "native_objects": 69,
+    "axon_floor_contact": 4,
+    "opacity_percent": [
+      8,
+      6.5
+    ]
+  }
 }
