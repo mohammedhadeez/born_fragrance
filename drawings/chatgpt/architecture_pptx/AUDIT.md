@@ -3,7 +3,7 @@
 Source repository snapshot: `eeccbde1cde8b3b40e75f30c1da98bf092c2f7eb`.
 Spec SHA-256: `58469767d64fed65cb53908ddbf3c5408fb7b5cdafefebd68b173381b6522c2b`.
 
-26 PPTX slides reopened successfully. LibreOffice exported all 26 pages to PDF. Every PDF page has an A3 landscape MediaBox and its matching AP sheet number. All native shape extents remain on the slide. Embedded logo and render are self-contained.
+25 PPTX slides reopened successfully. LibreOffice exported every page to PDF. All pages have A3 landscape MediaBoxes and stable AP sheet numbers. All native shape extents remain on the slide. Embedded images are self-contained.
 
 ## Geometry read back from written PPTX
 
@@ -51,3 +51,6 @@ Spec SHA-256: `58469767d64fed65cb53908ddbf3c5408fb7b5cdafefebd68b173381b6522c2b`
 - Scale checks apply to named geometry objects at original A3 size, not to indicative hardware/assembly envelopes, images or axonometric projection.
 - Reference books named in the handoff were not supplied; no content has been attributed to them.
 - PowerPoint and PDF were checked programmatically; rendered sheet contact proofs were reviewed for presentation issues.
+- Rev C removes AP-02 and develops AP-03, AP-08, AP-09 and AP-10. AP-12–26 remain frozen; their original register is historical. Indicative bottles are an explicit owner exception to the loose-products exclusion.
+- LOD 350 is a development target, not a certified achieved model status. Survey and unapproved connection details remain open.
+- Rev C paused original pages 12–26: PDF raster comparison is pixel-identical at 0.7×. The 10-page Review_C PPTX/PDF omits all paused sheets.
