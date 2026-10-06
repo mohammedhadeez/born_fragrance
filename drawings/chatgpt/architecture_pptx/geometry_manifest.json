@@ -275,7 +275,7 @@
       "NTS"
     ]
   ],
-  "revision": "G",
+  "revision": "H",
   "removed_sheet": "AP-02, AP-04, AP-11",
   "frozen_sheets": "AP-12 to AP-26",
   "sheet_order": [
@@ -303,16 +303,16 @@
     25,
     26
   ],
-  "review_source_commit": "7ea40202703e10627d1b27f1e76995172ea6140c",
+  "review_source_commit": "819460d0edd736c5ae06cb40f8123aa14954cbbc",
   "slide_titles": [
-    "Retail interior / coordinated design",
-    "Overall plan / setting-out",
-    "Ceiling / lighting coordination",
-    "Storefront / external elevation",
-    "Rear focal wall / internal elevation",
-    "Left display / internal elevation",
-    "Right display / internal elevation",
-    "Spatial assembly / cutaway axonometric",
+    "RETAIL INTERIOR / COORDINATED DESIGN",
+    "OVERALL PLAN / SETTING-OUT",
+    "CEILING / LIGHTING COORDINATION",
+    "STOREFRONT / EXTERNAL ELEVATION",
+    "REAR FOCAL WALL / INTERNAL ELEVATION",
+    "LEFT DISPLAY / INTERNAL ELEVATION",
+    "RIGHT DISPLAY / INTERNAL ELEVATION",
+    "SPATIAL ASSEMBLY / CUTAWAY AXONOMETRIC",
     "Display module / fabrication logic",
     "Shelf / frame / concealed LED",
     "Mesh / lighting / service access",

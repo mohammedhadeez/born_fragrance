@@ -8,9 +8,13 @@ The three books named in the handoff were not attached or available in the repos
 
 Active review sheets use concise connection-specific TBC notes; the owner requested removing their clouds. The paused archive retains its historical clouds. Surveyed dimensions are not available. Existing spec and Claude files are unchanged.
 
-Build the current revision with `PYTHONPATH=/tmp/bf-ppt-libs python3 drawings/chatgpt/architecture_pptx/review_g.py` (python-pptx, CairoSVG). It loads pinned committed revision F. Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. Older generators reproduce their corresponding historical revisions.
+Build the current revision with `python3 drawings/chatgpt/architecture_pptx/review_h.py` (python-pptx). It loads pinned committed revision G. Export the full Architecture PPTX to PDF with LibreOffice, then run `audit.py` to verify the deck and produce the focused review PDF, audit report and SVG exports. Older generators reproduce their corresponding historical revisions.
 
-## Current review — revision G
+## Final owner presentation edit — revision H
+
+Use `BORN_FRAGRANCE_Review_H.pdf` and the editable `BORN_FRAGRANCE_Review_H.pptx`. All eight active pages omit the top brand/discipline banner and use uppercase titles. The storefront entrance glazing has a translucent pale-blue tint; the door leaf is slightly stronger than the fixed panel. Interior linework remains visible. The G annotations, drawing dimensions, five-view cover gallery and paused archive are retained. H is the final requested presentation edit; existing technical TBCs remain documented.
+
+## Previous review — revision G
 
 Use `BORN_FRAGRANCE_Review_G.pptx` / `.pdf` for the eight active sheets. All seven technical sheets have revised native annotations: aligned direct descriptions, consistent title/body typography, horizontal leader terminals and corrected shelf, plinth, glass, track and branding targets. Dimension numbers are centred; side pitch figures sit outside their dimension line. The axonometric has an editable picture crop to remove unused raster space and shorter leaders on aligned left/right columns. The five-image cover arrangement from F is retained.
 
